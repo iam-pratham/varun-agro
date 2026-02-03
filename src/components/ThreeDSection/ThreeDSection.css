@@ -67,12 +67,13 @@
 .td-header-2 h1,
 .td-header-3 h1,
 .td-header-4 h1 {
-  width: 100%;
+  width: auto;
   font-size: 15vw;
   line-height: 1.25;
   letter-spacing: -0.02em;
   font-weight: 500;
   margin: 0;
+  white-space: nowrap;
 }
 
 .td-circular-mask {
