@@ -268,19 +268,22 @@ export default function Home() {
       </section>
       <section className="what-we-do">
         <div className="container">
+          <div className="what-we-do-header">
+            <h1 ref={headerRef}>
+              At Varun Agro, we are committed to sustainability, innovation, and customer focus, delivering premium quality food products with consistency and trust.
+            </h1>
+          </div>
           <div className="what-we-do-content">
             <div className="what-we-do-col">
-              <h1 ref={headerRef} className="lg">
-                About Us
-              </h1>
-            </div>
-            <div className="what-we-do-col">
+              <Copy delay={0.1}>
+                <p>Core Values</p>
+              </Copy>
+
               <p className="lg" ref={missionRef}>
-                At Varun Agro, we are committed to sustainability, innovation, and customer focus, delivering premium quality food products with consistency and trust.
-                <br />
-                <br />
                 Our mission is driven by responsible agriculture, advanced processing technology, and tailored products. We support local farmers and ecosystems while ensuring excellence in every product we deliver.
               </p>
+            </div>
+            <div className="what-we-do-col">
               <div className="what-we-do-tags" ref={tagsRef}>
                 <div className="what-we-do-tag">
                   <h3>Sustainability</h3>
