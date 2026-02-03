@@ -84,7 +84,7 @@ const PartnersMarquee = () => {
     <div className="partners-marquee" ref={containerRef}>
       <div className="container partners-header">
         <Copy delay={0.1}>
-            <h1 className="lg">Our Customers</h1>
+            <h1 className="lg">Our Partners</h1>
         </Copy>
       </div>
       <div className="marquee-container">

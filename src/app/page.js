@@ -17,6 +17,9 @@ import ClientReviews from "@/components/ClientReviews/ClientReviews";
 import CTAWindow from "@/components/CTAWindow/CTAWindow";
 import Copy from "@/components/Copy/Copy";
 import PartnersMarquee from "@/components/PartnersMarquee/PartnersMarquee";
+import ThreeDSection from "@/components/ThreeDSection/ThreeDSection";
+import FounderSection from "@/components/FounderSection/FounderSection";
+import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -314,54 +317,11 @@ export default function Home() {
         </div>
         <FeaturedProjects />
       </section>
-      <section className="client-reviews-container">
-        <div className="container">
-          <div className="client-reviews-header-callout">
-            <p>Voices from our partners</p>
-          </div>
-          <ClientReviews />
-        </div>
-      </section>
-      <section className="gallery-callout">
-        <div className="container">
-          <div className="gallery-callout-col">
-            <div className="gallery-callout-row">
-              <div className="gallery-callout-img gallery-callout-img-1">
-                <img src="/gallery-callout/gallery-callout-1.jpg" alt="" />
-              </div>
-              <div className="gallery-callout-img gallery-callout-img-2">
-                <img src="/gallery-callout/gallery-callout-2.jpg" alt="" />
-                <div className="gallery-callout-img-content">
-                  <h3>800+</h3>
-                  <p>Project Images</p>
-                </div>
-              </div>
-            </div>
-            <div className="gallery-callout-row">
-              <div className="gallery-callout-img gallery-callout-img-3">
-                <img src="/gallery-callout/gallery-callout-3.jpg" alt="" />
-              </div>
-              <div className="gallery-callout-img gallery-callout-img-4">
-                <img src="/gallery-callout/gallery-callout-4.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="gallery-callout-col">
-            <div className="gallery-callout-copy">
-              <Copy delay={0.1}>
-                <h3>
-                  Take a closer look at our state-of-the-art processing facilities
-                  and quality control measures. From farm to finished product, see
-                  how we ensure excellence.
-                </h3>
-              </Copy>
-              <AnimatedButton label="View Facilities" route="facilities" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ThreeDSection />
+      <FounderSection />
+      <TestimonialsSection />
       <CTAWindow
-        img="/home/hero-cta.jpeg?v=1"
+        img="/home/Ultrarealistic_studio_product_2k_20260203114.jpeg"
         header="Varun Agro"
         callout="Excellence, Integrity, Commitment"
         description="Delivering premium quality food products with a commitment to excellence and community growth."
