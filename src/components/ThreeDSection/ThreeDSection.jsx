@@ -241,6 +241,18 @@ const ThreeDSection = () => {
             item4Revealed.current = false;
             resetText(".td-info-items-bottom .td-info-item:nth-child(2)");
         }
+
+        // 3D Model Rotation Logic
+        if (modelRef.current) {
+          const rotationProgress = progress;
+          const targetRotation = Math.PI * 3 * 4 * rotationProgress;
+          const rotationDiff = targetRotation - currentRotationRef.current;
+          
+          if (Math.abs(rotationDiff) > 0.001) {
+            modelRef.current.rotateOnAxis(new THREE.Vector3(0, 1, 0), rotationDiff);
+            currentRotationRef.current = targetRotation;
+          }
+        }
       },
     });
 
@@ -336,12 +348,6 @@ const ThreeDSection = () => {
     let animationId;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      
-      // Continuous Rotation
-      if (modelRef.current) {
-        modelRef.current.rotateY(0.005);
-      }
-
       renderer.render(scene, camera);
     };
     animate();
