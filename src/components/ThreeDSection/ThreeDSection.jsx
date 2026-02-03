@@ -47,7 +47,7 @@ const ThreeDSection = () => {
     );
 
     // Camera position
-    const cameraDistance = isMobile ? 2.2 : 1.5;
+    const cameraDistance = isMobile ? 2.5 : 1.8;
     camera.position.set(
       0,
       0,
