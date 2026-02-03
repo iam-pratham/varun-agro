@@ -148,41 +148,39 @@
     display: inline-block;
 }
 
-.td-header-1 h1 .char > span {
-  position: relative;
-  display: block;
-  transform: translateY(100%);
-  will-change: transform;
-}
-
 @media (max-width: 1000px) {
   .td-header-1 h1,
   .td-header-2 h1,
   .td-header-3 h1,
   .td-header-4 h1 {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 20vw; /* Larger relative font size for mobile impact, or smaller if too big? 15vw on desktop is huge. 20vw on mobile is 1/5th screen width per char approx. */
   }
-
-  .td-info-items {
-    width: 90%;
-    flex-direction: column;
+  
+  .td-info-items-top {
+    top: 2rem;
+  }
+  
+  .td-info-items-bottom {
     bottom: 2rem;
-    gap: 2rem;
   }
 
   .td-info-item {
-    width: 100%;
-    text-align: left;
-    align-items: flex-start;
-  }
-  
-  .td-info-item:nth-child(2) {
-    text-align: left;
-    align-items: flex-start;
+    width: 45vw;
   }
 
   .td-info-item h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .td-info-item p {
+    font-size: 0.75rem;
+    display: none; /* Hide description on very small screens if needed, or keep it small */
+  }
+  
+  /* Show description but maybe smaller? The user wants "properly placed". */
+  .td-info-item p {
+     display: block;
+     font-size: 0.7rem;
+     line-height: 1.2;
   }
 }

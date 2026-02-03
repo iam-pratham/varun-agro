@@ -104,40 +104,43 @@
 
 .author-info p {
   color: #888;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
 }
 
 .quote-icon {
-  font-size: 4rem;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.05);
-  font-family: serif;
-  transform: translateY(1rem);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
+  .testimonials-track {
+    padding: 2rem 0;
+    gap: 1rem;
+  }
+  
   .testimonial-card {
     width: 300px;
+    height: auto;
+    min-height: 250px;
     padding: 1.5rem;
-    height: 280px;
+  }
+  
+  /* Reduce stagger on mobile */
+  .testimonial-card:nth-child(5n+1),
+  .testimonial-card:nth-child(5n+2),
+  .testimonial-card:nth-child(5n+3),
+  .testimonial-card:nth-child(5n+4),
+  .testimonial-card:nth-child(5n+5) {
+    transform: translateY(0);
   }
   
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
   
-  .testimonials-track {
-    padding: 2rem 0;
-  }
-  
-  /* Less dramatic stagger on mobile */
-  .testimonial-card:nth-child(odd) {
-    transform: translateY(-0.5rem);
-  }
-  
-  .testimonial-card:nth-child(even) {
-    transform: translateY(0.5rem);
+  .author-avatar {
+    width: 35px;
+    height: 35px;
   }
 }
