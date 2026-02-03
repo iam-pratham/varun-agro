@@ -15,7 +15,6 @@ if (typeof window !== "undefined") {
 const ThreeDSection = () => {
   const containerRef = useRef(null);
   const modelRef = useRef(null);
-  const targetRotationRef = useRef(0);
   const currentRotationRef = useRef(0);
   const modelSizeRef = useRef(null);
   const cameraRef = useRef(null);
@@ -32,16 +31,11 @@ const ThreeDSection = () => {
     const camera = cameraRef.current;
 
     // Initial rotation (applied to Group)
-    // Rotate to show the side profile (length part) initially
     group.rotation.set(
-      THREE.MathUtils.degToRad(10), // Tilt slightly
-      THREE.MathUtils.degToRad(90), // Rotate 90 deg to show side profile
+      THREE.MathUtils.degToRad(10),
+      0,
       isMobile ? 0 : THREE.MathUtils.degToRad(-20)
     );
-
-    // Set initial target rotation to current rotation
-    currentRotationRef.current = THREE.MathUtils.degToRad(90);
-    targetRotationRef.current = THREE.MathUtils.degToRad(90);
 
     // Camera position
     const cameraDistance = isMobile ? 2.5 : 1.8;
@@ -243,15 +237,16 @@ const ThreeDSection = () => {
             resetText(".td-info-items-bottom .td-info-item:nth-child(2)");
         }
 
-        // 3D Model Rotation Logic - Update Target Only
+        // 3D Model Rotation Logic
         if (modelRef.current) {
           const rotationProgress = progress;
-          // Reduce rotation speed (Math.PI * 2 * 2 = 2 full rotations instead of 12)
-          // Add initial offset of 90 deg (Math.PI/2)
-          const baseRotation = Math.PI / 2;
-          const totalRotation = Math.PI * 2 * 2;
+          const targetRotation = Math.PI * 3 * 4 * rotationProgress;
+          const rotationDiff = targetRotation - currentRotationRef.current;
           
-          targetRotationRef.current = baseRotation + (totalRotation * rotationProgress);
+          if (Math.abs(rotationDiff) > 0.001) {
+            modelRef.current.rotateOnAxis(new THREE.Vector3(0, 1, 0), rotationDiff);
+            currentRotationRef.current = targetRotation;
+          }
         }
       },
     });
@@ -284,7 +279,7 @@ const ThreeDSection = () => {
     rendererRef.current = renderer;
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
@@ -305,8 +300,8 @@ const ThreeDSection = () => {
     mainLight.position.set(1, 2, 3);
     mainLight.castShadow = true;
     mainLight.shadow.bias = -0.001;
-    mainLight.shadow.mapSize.width = 512;
-    mainLight.shadow.mapSize.height = 512;
+    mainLight.shadow.mapSize.width = 1024;
+    mainLight.shadow.mapSize.height = 1024;
     scene.add(mainLight);
 
     const fillLight = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -348,16 +343,6 @@ const ThreeDSection = () => {
     let animationId;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      
-      // Smooth Rotation Lerp
-      if (modelRef.current) {
-        const diff = targetRotationRef.current - currentRotationRef.current;
-        if (Math.abs(diff) > 0.0001) {
-            currentRotationRef.current += diff * 0.1; // Lerp factor 0.1 for smoothness
-            modelRef.current.rotation.y = currentRotationRef.current;
-        }
-      }
-
       renderer.render(scene, camera);
     };
     animate();
