@@ -318,7 +318,7 @@ const ThreeDSection = () => {
     scene.add(fillLight);
 
     // Load Model
-    new GLTFLoader().load("/3D/tomato.glb?v=3", (gltf) => {
+    new GLTFLoader().load("/3D/mango.glb?v=3", (gltf) => {
       const model = gltf.scene;
       modelRef.current = model;
 
