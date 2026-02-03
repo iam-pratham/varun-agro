@@ -1,0 +1,206 @@
+.sustainability-page {
+  width: 100%;
+  background-color: var(--base-100);
+  color: var(--base-900);
+  padding-top: 100px;
+}
+
+.sus-hero {
+  padding: 4em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sus-hero h1 {
+  font-size: 6vw;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.sus-hero p {
+  font-size: 1.5rem;
+  max-width: 60%;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+/* Diagram Section */
+.sus-diagram-section {
+  padding: 8em 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sus-diagram-header {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.sus-diagram-header h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sus-diagram-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
+  position: relative;
+}
+
+.sus-card {
+  flex: 1;
+  min-width: 250px;
+  background: #f5f5f5;
+  padding: 2em;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.sus-card:hover {
+  transform: translateY(-10px);
+}
+
+.sus-card-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  color: #4a6741; /* Greenish tone for sustainability */
+}
+
+.sus-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.sus-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Cycle Diagram Animation */
+.sus-cycle-container {
+  margin-top: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 600px;
+}
+
+.sus-cycle-circle {
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sus-cycle-center {
+  text-align: center;
+  z-index: 2;
+}
+
+.sus-cycle-center h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #4a6741;
+}
+
+.sus-cycle-item {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  opacity: 0; /* Hidden for GSAP */
+}
+
+/* Positioning items around the circle */
+.item-1 { top: -100px; left: 50%; transform: translateX(-50%); }
+.item-2 { top: 50%; right: -150px; transform: translateY(-50%); }
+.item-3 { bottom: -100px; left: 50%; transform: translateX(-50%); }
+.item-4 { top: 50%; left: -150px; transform: translateY(-50%); }
+
+.sus-cycle-line {
+  position: absolute;
+  background: #4a6741;
+  z-index: 1;
+  transform-origin: left center;
+}
+
+/* Stats Section */
+.sus-stats-section {
+  background: #141313;
+  color: #fff;
+  padding: 6em 0;
+}
+
+.sus-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  text-align: center;
+}
+
+.sus-stat h2 {
+  font-size: 4rem;
+  color: #4a6741;
+  margin-bottom: 0.2em;
+}
+
+.sus-stat p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .sus-hero h1 {
+    font-size: 15vw;
+  }
+  
+  .sus-hero p {
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
+  
+  .sus-diagram-container {
+    flex-direction: column;
+  }
+  
+  .sus-cycle-container {
+    height: auto;
+    padding: 4em 0;
+    flex-direction: column;
+  }
+  
+  .sus-cycle-circle {
+    width: 300px;
+    height: 300px;
+    margin: 2em 0;
+  }
+  
+  .sus-cycle-item {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 1em 0;
+    width: 100%;
+  }
+  
+  .sus-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
