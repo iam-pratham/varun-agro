@@ -124,18 +124,23 @@ const ThreeDSection = () => {
       trigger: ".td-product-overview",
       start: "75% bottom",
       onEnter: () =>
-        gsap.to(".td-header-1 h1 .char > span", {
-          y: "0%",
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.025,
-        }),
+        gsap.fromTo(".td-header-1 h1 .char > span", 
+          { y: "100%" },
+          {
+            y: "0%",
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.025,
+            overwrite: true
+          }
+        ),
       onLeaveBack: () =>
         gsap.to(".td-header-1 h1 .char > span", {
           y: "100%",
           duration: 1,
           ease: "power3.out",
           stagger: 0.025,
+          overwrite: true
         }),
     });
 

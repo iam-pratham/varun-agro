@@ -144,6 +144,11 @@
   overflow: hidden;
 }
 
+.td-header-1 h1 .char > span {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
 .td-info-item h2 .char {
     display: inline-block;
 }
