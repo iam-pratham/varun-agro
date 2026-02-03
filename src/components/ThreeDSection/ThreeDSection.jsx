@@ -145,7 +145,7 @@ const ThreeDSection = () => {
     });
 
     // Main Pinned Animation
-    ScrollTrigger.create({
+    const mainPin = ScrollTrigger.create({
       trigger: ".td-product-overview",
       start: "center center",
       end: `+=${window.innerHeight * 6.5}px`,
@@ -254,6 +254,26 @@ const ThreeDSection = () => {
           }
         }
       },
+    });
+
+    // Exit Rotation Animation
+    ScrollTrigger.create({
+        trigger: ".td-product-overview",
+        start: () => mainPin.end,
+        end: "bottom top", 
+        onUpdate: ({ progress }) => {
+            if (modelRef.current) {
+                const baseRotation = Math.PI * 12; 
+                const extraRotation = Math.PI * 4; 
+                const targetRotation = baseRotation + (extraRotation * progress);
+                const rotationDiff = targetRotation - currentRotationRef.current;
+
+                if (Math.abs(rotationDiff) > 0.001) {
+                    modelRef.current.rotateOnAxis(new THREE.Vector3(0, 1, 0), rotationDiff);
+                    currentRotationRef.current = targetRotation;
+                }
+            }
+        }
     });
 
     return () => {
