@@ -15,10 +15,9 @@
   position: relative;
   width: 100%;
   height: calc(100svh - 2rem);
-  background-color: #1f1d1d;
+  background-color: #141313;
   overflow: hidden;
   border-radius: 2rem;
-  border: 1px solid rgba(242, 237, 230, 0.05);
   margin: 0 auto;
 }
 
@@ -86,9 +85,21 @@
   visibility: hidden;
 }
 
-.td-info-items {
+.td-info-items-bottom {
   position: absolute;
   bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.td-info-items-top {
+  position: absolute;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;

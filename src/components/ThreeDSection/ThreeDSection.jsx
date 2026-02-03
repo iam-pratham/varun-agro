@@ -58,6 +58,8 @@ const ThreeDSection = () => {
 
   const item1Revealed = useRef(false);
   const item2Revealed = useRef(false);
+  const item3Revealed = useRef(false);
+  const item4Revealed = useRef(false);
 
   useGSAP(() => {
     // Split Text Setup
@@ -208,22 +210,40 @@ const ThreeDSection = () => {
         // Tooltip Divider Logic (Removed)
         
         // Info Items Reveal Logic (Scramble)
-        // Item 1
-        if (progress > 0.35 && !item1Revealed.current) {
+        // Item 1 (Top Left)
+        if (progress > 0.25 && !item1Revealed.current) {
             item1Revealed.current = true;
-            scrambleText(".td-info-item:nth-child(1)");
-        } else if (progress < 0.3 && item1Revealed.current) {
+            scrambleText(".td-info-items-top .td-info-item:nth-child(1)");
+        } else if (progress < 0.2 && item1Revealed.current) {
             item1Revealed.current = false;
-            resetText(".td-info-item:nth-child(1)");
+            resetText(".td-info-items-top .td-info-item:nth-child(1)");
         }
 
-        // Item 2
-        if (progress > 0.55 && !item2Revealed.current) {
+        // Item 2 (Top Right)
+        if (progress > 0.35 && !item2Revealed.current) {
             item2Revealed.current = true;
-            scrambleText(".td-info-item:nth-child(2)");
-        } else if (progress < 0.5 && item2Revealed.current) {
+            scrambleText(".td-info-items-top .td-info-item:nth-child(2)");
+        } else if (progress < 0.3 && item2Revealed.current) {
             item2Revealed.current = false;
-            resetText(".td-info-item:nth-child(2)");
+            resetText(".td-info-items-top .td-info-item:nth-child(2)");
+        }
+
+        // Item 3 (Bottom Left)
+        if (progress > 0.45 && !item3Revealed.current) {
+            item3Revealed.current = true;
+            scrambleText(".td-info-items-bottom .td-info-item:nth-child(1)");
+        } else if (progress < 0.4 && item3Revealed.current) {
+            item3Revealed.current = false;
+            resetText(".td-info-items-bottom .td-info-item:nth-child(1)");
+        }
+
+        // Item 4 (Bottom Right)
+        if (progress > 0.55 && !item4Revealed.current) {
+            item4Revealed.current = true;
+            scrambleText(".td-info-items-bottom .td-info-item:nth-child(2)");
+        } else if (progress < 0.5 && item4Revealed.current) {
+            item4Revealed.current = false;
+            resetText(".td-info-items-bottom .td-info-item:nth-child(2)");
         }
 
         // 3D Model Rotation Logic
@@ -367,7 +387,24 @@ const ThreeDSection = () => {
 
             <div className="td-circular-mask"></div>
 
-            <div className="td-info-items">
+            <div className="td-info-items-top">
+                <div className="td-info-item">
+                    <h2>Global Vision</h2>
+                    <p>
+                        Expanding horizons with innovative agricultural solutions
+                        for a connected world.
+                    </p>
+                </div>
+                <div className="td-info-item">
+                    <h2>Community First</h2>
+                    <p>
+                        Empowering local farmers through fair trade and
+                        continuous support systems.
+                    </p>
+                </div>
+            </div>
+
+            <div className="td-info-items-bottom">
                 <div className="td-info-item">
                     <h2>Premium Quality</h2>
                     <p>
