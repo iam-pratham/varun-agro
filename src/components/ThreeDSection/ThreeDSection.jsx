@@ -260,7 +260,8 @@ const ThreeDSection = () => {
     ScrollTrigger.create({
         trigger: ".td-product-overview",
         start: () => mainPin.end,
-        end: "bottom top", 
+        end: () => "+=" + window.innerHeight, 
+        scrub: 1,
         onUpdate: ({ progress }) => {
             if (modelRef.current) {
                 const baseRotation = Math.PI * 12; 
