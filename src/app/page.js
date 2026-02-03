@@ -51,17 +51,32 @@ export default function Home() {
 
   useGSAP(() => {
     if (!headerRef.current) return;
-    gsap.from(headerRef.current, {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
+    
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: headerRef.current,
         start: "top 85%",
         once: true,
       },
     });
+
+    tl.from(headerRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    tl.to(
+      ".commitment",
+      {
+        color: "#d4cdc3", 
+        fontStyle: "italic",
+        duration: 1,
+        ease: "power3.out",
+      },
+      "<0.2"
+    );
   });
 
   useGSAP(() => {
@@ -270,7 +285,7 @@ export default function Home() {
         <div className="container">
           <div className="what-we-do-header">
             <h1 ref={headerRef}>
-              At Varun Agro, we are committed to sustainability, innovation, and customer focus, delivering premium quality food products with consistency and trust.
+              At Varun Agro, we are <span className="commitment">committed to</span> sustainability, innovation, and customer focus, delivering premium quality food products with consistency and trust.
             </h1>
           </div>
           <div className="what-we-do-content">
