@@ -70,14 +70,14 @@ export default function Home() {
     tl.to(
       ".commitment",
       {
-        color: "#d4cdc3", 
+        color: "#998f82", 
         fontStyle: "italic",
-        duration: 1,
+        duration: 1.5,
         ease: "power3.out",
       },
-      "<0.2"
+      "<0.1"
     );
-  });
+  }, { scope: headerRef });
 
   useGSAP(() => {
     const tl = gsap.timeline({
