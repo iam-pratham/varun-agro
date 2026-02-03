@@ -1,0 +1,83 @@
+.partners-marquee {
+  position: relative;
+  width: 100vw;
+  padding: 5rem 0 0 0; /* Reduced bottom padding to 0 to align with 10rem spacing of next section */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduced from 4rem to match Our Products spacing */
+  background-color: var(--base-500); /* Match the section background */
+}
+
+.partners-header {
+  /* Removed explicit padding to align with other containers */
+}
+
+.partners-header h1 {
+  color: #998f82; /* Changed to #998f82 */
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0; /* Add padding to prevent scaled logos from being cut off */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 6rem;
+  padding-right: 6rem;
+  width: max-content;
+  will-change: transform;
+  align-items: center; /* Ensure items are centered vertically in the padded track */
+}
+
+.partner-logo {
+  height: 6rem; /* Increased from 4rem */
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* overflow: hidden; Removed to allow logos to scale up without clipping */
+}
+
+.partner-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 200px; /* Increased from 150px */
+  object-fit: contain;
+  /* 
+    Filter for var(--base-100) / #F2EDE6:
+    brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(542%) hue-rotate(333deg) brightness(101%) contrast(93%)
+  */
+  filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(542%) hue-rotate(333deg) brightness(101%) contrast(93%);
+  opacity: 1; /* Reset opacity to full to see the color clearly */
+  transition: filter 0.3s ease;
+}
+
+.partner-logo img:hover {
+  /* On hover, keep it same or slightly brighter */
+  filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(542%) hue-rotate(333deg) brightness(110%) contrast(93%);
+}
+
+.partner-logo img[alt="raw"] {
+  transform: scale(1.8);
+}
+
+.partner-logo img[alt="paper boat"] {
+  transform: scale(1.25); /* Slightly increased size, reduced from 1.5 to prevent cut off */
+}
+
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .partner-logo {
+    height: 4rem; /* Increased from 3rem */
+  }
+}
