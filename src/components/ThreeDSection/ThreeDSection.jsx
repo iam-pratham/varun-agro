@@ -26,21 +26,12 @@ const ThreeDSection = () => {
     if (!modelRef.current || !modelSizeRef.current || !cameraRef.current) return;
 
     const isMobile = window.innerWidth < 1000;
-    const model = modelRef.current;
+    const group = modelRef.current;
     const modelSize = modelSizeRef.current;
     const camera = cameraRef.current;
 
-    const box = new THREE.Box3().setFromObject(model);
-    const center = box.getCenter(new THREE.Vector3());
-
-    model.position.set(
-      -center.x,
-      -center.y,
-      -center.z
-    );
-
-    // Initial rotation
-    model.rotation.set(
+    // Initial rotation (applied to Group)
+    group.rotation.set(
       THREE.MathUtils.degToRad(10),
       0,
       isMobile ? 0 : THREE.MathUtils.degToRad(-20)
@@ -320,7 +311,11 @@ const ThreeDSection = () => {
     // Load Model
     new GLTFLoader().load("/3D/mango.glb?v=3", (gltf) => {
       const model = gltf.scene;
-      modelRef.current = model;
+      
+      // Create a pivot group
+      const group = new THREE.Group();
+      scene.add(group);
+      modelRef.current = group; // Animation loop will rotate the group
 
       model.traverse((node) => {
         if (node.isMesh && node.material) {
@@ -331,11 +326,16 @@ const ThreeDSection = () => {
         }
       });
 
+      // Calculate center and offset model inside group
       const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
       const size = box.getSize(new THREE.Vector3());
+      
+      model.position.set(-center.x, -center.y, -center.z);
+      
+      group.add(model); // Add offset model to group
       modelSizeRef.current = size;
 
-      scene.add(model);
       setupModel();
     });
 
