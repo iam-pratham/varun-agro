@@ -62,7 +62,7 @@ const PineappleViewer = () => {
         
         // Move slightly to left
         group.position.x = 0.1;
-        group.position.y = -0.2; 
+        group.position.y = -0.1; 
 
         // Calculate camera distance to fit
         // Reduced to 0.9 to make it bigger (was 1.3)
