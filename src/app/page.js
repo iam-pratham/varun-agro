@@ -20,6 +20,7 @@ import PartnersMarquee from "@/components/PartnersMarquee/PartnersMarquee";
 import ThreeDSection from "@/components/ThreeDSection/ThreeDSection";
 import FounderSection from "@/components/FounderSection/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
+import ParticleBackground from "@/components/ParticleBackground/ParticleBackground";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -90,43 +91,36 @@ export default function Home() {
     if (showPreloader) {
       setLoaderAnimating(true);
       
-      tl.to(
-        ".word h1",
-        {
-          y: "0%",
-          duration: 1,
-        }
-      );
+      // Counter animation
+      const counter = { val: 0 };
+      const counterDuration = 2.5;
 
-      tl.to(".divider", {
-        scaleY: "100%",
-        duration: 1,
-        onComplete: () =>
-          gsap.to(".divider", { opacity: 0, duration: 0.3, delay: 0.3 }),
-      });
-
-      tl.to("#word-1 h1", {
-        y: "100%",
-        duration: 1,
-        delay: 0.3,
-      });
-
-      tl.to(
-        "#word-2 h1",
-        {
-          y: "-100%",
-          duration: 1,
+      tl.to(counter, {
+        val: 100,
+        duration: counterDuration,
+        ease: "power2.inOut",
+        onUpdate: () => {
+          const counterText = document.querySelector(".counter-text");
+          if (counterText) {
+            counterText.innerText = Math.floor(counter.val) + "%";
+          }
         },
-        "<"
-      );
+      });
 
+      // Fade out counter
+      tl.to(".counter-container", {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.2,
+      });
+
+      // Reveal animation (same as before)
       tl.to(
         ".block",
         {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
           duration: 1,
           stagger: 0.1,
-          delay: 0.75,
           onStart: () => {
             gsap.to(".hero-img", { scale: 1, duration: 2, ease: "hop" });
           },
@@ -135,7 +129,7 @@ export default function Home() {
             setLoaderAnimating(false);
           },
         },
-        "<"
+        "-=0.2" // Overlap slightly with fade out
       );
     }
   }, [showPreloader]);
@@ -186,21 +180,14 @@ export default function Home() {
             <div className="block"></div>
             <div className="block"></div>
           </div>
-          <div className="intro-logo">
-            <div className="word" id="word-1">
-              <h1>
-                <span>Varun</span>
-              </h1>
-            </div>
-            <div className="word" id="word-2">
-              <h1>Agro</h1>
-            </div>
+          <div className="counter-container">
+            <h1 className="counter-text">0%</h1>
           </div>
-          <div className="divider"></div>
         </div>
       )}
       <Nav />
       <section className="hero">
+        <ParticleBackground />
         <div className="hero-gradient"></div>
         <div className="container">
           <div className="hero-content">
