@@ -12,10 +12,10 @@ const ParticleBackground = () => {
     const config = {
       // canvasBg: "#0d0c0c", // Dark background
       canvasBg: "#1f1d1d", // Dark background
-      logoSize: 2000,
+      logoSize: 2200,
       distortionRadius: 2000,
-      forceStrength: 0.015, // Reduced from 0.05 to prevent extreme distortion
-      maxDisplacement: 500, // Reduced from 1000 to limit spread
+      forceStrength: 0.05,
+      maxDisplacement: 1000,
       returnForce: 0.1,
       logoPath: "/varun-agro.svg",
       particleSpacing: 2,
@@ -184,7 +184,7 @@ const ParticleBackground = () => {
               242 / 255,
               237 / 255,
               230 / 255,
-              (pixels[idx + 3] / 255) * 0.15 // Much lower opacity for darker blend
+              (pixels[idx + 3] / 255) * 0.8
             );
             particles.push({ ox: x, oy: y, vx: 0, vy: 0 });
           }
