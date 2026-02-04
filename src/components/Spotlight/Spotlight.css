@@ -140,7 +140,7 @@
   color: var(--base-100);
   opacity: 0.35;
   transition: opacity 0.3s ease;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1;
 }

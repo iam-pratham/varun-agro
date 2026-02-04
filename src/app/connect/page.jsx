@@ -4,6 +4,7 @@ import "./contact.css";
 import Nav from "@/components/Nav/Nav";
 import ConditionalFooter from "@/components/ConditionalFooter/ConditionalFooter";
 import Copy from "@/components/Copy/Copy";
+import PineappleViewer from "@/components/PineappleViewer/PineappleViewer";
 
 const page = () => {
   return (
@@ -20,7 +21,7 @@ const page = () => {
               </div>
               <div className="contact-copy-year">
                 <Copy delay={0.1}>
-                  <h1>&copy;25</h1>
+                  <h1>&copy;26</h1>
                 </Copy>
               </div>
             </div>
@@ -55,10 +56,7 @@ const page = () => {
                 </div>
               </div>
               <div className="contact-img">
-                <img
-                  src="/contact/contact-img.jpg"
-                  alt="Terrene studio workspace"
-                />
+                <PineappleViewer />
               </div>
             </div>
           </div>

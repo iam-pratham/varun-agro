@@ -236,21 +236,11 @@ const Nav = () => {
                 </a>
               </div>
               <div className="link">
-                <a href="/sustainability" onClick={(e) => handleLinkClick(e, "/sustainability")}>
-                  <h2>Sustainability</h2>
-                </a>
-              </div>
-              <div className="link">
                 <a
                   href="/studio"
                   onClick={(e) => handleLinkClick(e, "/studio")}
                 >
                   <h2>About us</h2>
-                </a>
-              </div>
-              <div className="link">
-                <a href="/team" onClick={(e) => handleLinkClick(e, "/team")}>
-                  <h2>Our team</h2>
                 </a>
               </div>
               <div className="link">
@@ -264,13 +254,13 @@ const Nav = () => {
                 </a>
               </div>
               <div className="link">
-                <a
-                  href="/spaces"
-                  onClick={(e) => handleLinkClick(e, "/spaces")}
-                >
-                  <h2>Products</h2>
-                </a>
-              </div>
+            <a
+              href="/products"
+              onClick={(e) => handleLinkClick(e, "/products")}
+            >
+              <h2>Products</h2>
+            </a>
+          </div>
               <div className="link">
                 <a
                   href="/connect"

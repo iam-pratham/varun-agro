@@ -1,0 +1,243 @@
+/* =========================================
+   PRODUCTS PAGE - "CLEAN DARK"
+   ========================================= */
+
+.products-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--base-500);
+    color: var(--base-100);
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+/* --- HERO SECTION --- */
+.products-hero {
+    padding: 10rem 2rem 6rem 2rem;
+    text-align: center;
+}
+
+.products-hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--base-100);
+    margin-bottom: 2rem;
+}
+
+.products-hero p {
+    font-size: 1.25rem;
+    color: var(--base-200);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* --- CATEGORY FILTER --- */
+.category-filter {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(20, 19, 19, 0.9); /* var(--base-500) with opacity */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    margin-bottom: 4rem;
+}
+
+.filter-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: var(--base-300);
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    color: var(--base-100);
+}
+
+.filter-btn.active {
+    color: var(--base-500);
+    background-color: var(--base-100);
+}
+
+/* --- PRODUCTS GRID --- */
+.products-grid-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: 50vh;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* --- PRODUCT CARD --- */
+.product-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0; /* Sharp edges for Swiss style */
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1; /* Square images */
+    background-color: var(--base-450);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.product-header h3 {
+    font-size: 1.5rem;
+    color: var(--base-100);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.product-category {
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--base-300);
+    letter-spacing: 0.05em;
+}
+
+.product-desc {
+    font-size: 1rem;
+    color: var(--base-200);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.product-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto; /* Push to bottom */
+}
+
+.spec-tag {
+    font-size: 0.8rem;
+    color: var(--base-200);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+}
+
+/* --- EMPTY STATE --- */
+.no-products {
+    text-align: center;
+    padding: 4rem;
+    color: var(--base-300);
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+/* --- PAGINATION --- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.pagination-btn {
+    background-color: transparent;
+    border: 1px solid var(--base-300);
+    color: var(--base-100);
+    padding: 0.75rem 1.5rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: var(--base-100);
+    color: var(--base-500);
+    border-color: var(--base-100);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: var(--base-450);
+}
+
+.pagination-info {
+    font-family: "DM Mono", monospace;
+    color: var(--base-200);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .products-hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .filter-container {
+        gap: 1rem;
+        padding: 0 1rem;
+        justify-content: flex-start;
+        overflow-x: auto; /* Scrollable on mobile */
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+    }
+}

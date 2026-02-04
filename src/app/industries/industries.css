@@ -1,0 +1,232 @@
+/* =========================================
+   INDUSTRIES PAGE - "CLEAN DARK"
+   ========================================= */
+
+.industries-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--base-500);
+  color: var(--base-100);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+.industries-hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 10rem 2rem 6rem 2rem;
+  position: relative;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 6rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--base-100);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-intro {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  border-left: 1px solid var(--base-100);
+  padding-left: 2.5rem;
+}
+
+.hero-intro p {
+  max-width: 480px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--base-200);
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+}
+
+/* --- SECTIONS COMMON --- */
+.industry-section {
+  padding: 8rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .hero-container,
+  .section-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .industries-hero {
+    padding-top: 8rem;
+    min-height: auto;
+  }
+
+  .hero-intro {
+    margin-top: 2rem;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--base-100);
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: var(--base-300);
+    margin-top: 1rem;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content-block h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--base-100);
+}
+
+.content-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--base-200);
+  margin-bottom: 1rem;
+}
+
+.content-list {
+  list-style: none;
+  padding: 0;
+}
+
+.content-list li {
+  position: relative;
+  padding-left: 0; /* Removed extra indentation */
+  margin-bottom: 0.75rem;
+  color: var(--base-200);
+  font-size: 1.1rem;
+  list-style-position: inside; /* Ensures bullets align with text */
+}
+
+.content-list li::marker {
+  color: var(--base-200); /* Consistent color */
+}
+
+/* Remove custom before element if using list-style or adjust it */
+.content-list li::before {
+  content: none;
+}
+
+/* --- EXPORT SECTION --- */
+.export-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item h4 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--base-100);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--base-300);
+    font-family: "DM Mono", monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* --- CTA SECTION --- */
+.industries-cta {
+    padding: 10rem 2rem;
+    background-color: var(--base-450); /* Darker Patch Shade */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+}
+
+.cta-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--base-100);
+    margin: 0;
+    font-weight: 500;
+}
+
+.cta-sub {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--base-200);
+    margin: 0;
+    max-width: 500px;
+}
+
+.cta-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .industries-cta {
+        padding: 6rem 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 3rem;
+    }
+}

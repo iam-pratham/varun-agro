@@ -9,7 +9,7 @@
   background-color: var(--base-500);
   overflow: hidden;
   padding: 1rem;
-  z-index: 100;
+  z-index: 900;
 }
 
 .menu-wrapper {

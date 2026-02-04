@@ -91,15 +91,6 @@ const Footer = () => {
                   <h3>About us</h3>
                 </a>
                 <a
-                  href="/team"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateWithTransition("/team");
-                  }}
-                >
-                  <h3>Our team</h3>
-                </a>
-                <a
                   href="/investor-corner"
                   onClick={(e) => {
                     e.preventDefault();

@@ -26,16 +26,16 @@ const Spotlight = () => {
   };
 
   const spotlightItems = [
-    { name: "Courtyard Stillness", img: "/spotlight/spotlight-img-1.jpg" },
-    { name: "Blue Horizon", img: "/spotlight/spotlight-img-2.jpg" },
-    { name: "Stone Quiet", img: "/spotlight/spotlight-img-3.jpg" },
-    { name: "Amber Niche", img: "/spotlight/spotlight-img-4.jpg" },
-    { name: "Earthen Shelf", img: "/spotlight/spotlight-img-5.jpg" },
-    { name: "Reflective White", img: "/spotlight/spotlight-img-6.jpg" },
-    { name: "Desert Edge", img: "/spotlight/spotlight-img-7.jpg" },
-    { name: "Soft Passage", img: "/spotlight/spotlight-img-8.jpg" },
-    { name: "Water Column", img: "/spotlight/spotlight-img-9.jpg" },
-    { name: "Golden Retreat", img: "/spotlight/spotlight-img-10.jpg" },
+    { name: "2010 - Company Registration", img: "/spotlight/spotlight-img-1.jpg" },
+    { name: "2012 - Tomato Pulp", img: "/spotlight/spotlight-img-2.jpg" },
+    { name: "2013 - Mango Concentrates", img: "/spotlight/spotlight-img-3.jpg" },
+    { name: "2014 - Papaya Pulp", img: "/spotlight/spotlight-img-4.jpg" },
+    { name: "2015 - Banana Pulp", img: "/spotlight/spotlight-img-5.jpg" },
+    { name: "2016 - Lime Pulp", img: "/spotlight/spotlight-img-6.jpg" },
+    { name: "2019 - Zingat Ketchup Brand", img: "/spotlight/spotlight-img-7.jpg" },
+    { name: "2020 - Frozen Fruits & Vegetables", img: "/spotlight/spotlight-img-8.jpg" },
+    { name: "2021 - Jamun Pulp", img: "/spotlight/spotlight-img-9.jpg" },
+    { name: "2022 - Strawberry Pulp", img: "/spotlight/spotlight-img-10.jpg" },
   ];
 
   useEffect(() => {
@@ -284,13 +284,13 @@ const Spotlight = () => {
             className="spotlight-intro-text"
             ref={(el) => (introTextElementsRef.current[0] = el)}
           >
-            <p>Nature</p>
+            <p>Our</p>
           </div>
           <div
             className="spotlight-intro-text"
             ref={(el) => (introTextElementsRef.current[1] = el)}
           >
-            <p>Science</p>
+            <p>History</p>
           </div>
         </div>
         <div className="spotlight-bg-img">
@@ -305,7 +305,7 @@ const Spotlight = () => {
       </div>
       <div className="spotlight-images" ref={imagesContainerRef}></div>
       <div className="spotlight-header" ref={spotlightHeaderRef}>
-        <p>Excellence</p>
+        <p>Milestones</p>
       </div>
       <div className="spotlight-outline"></div>
     </section>
