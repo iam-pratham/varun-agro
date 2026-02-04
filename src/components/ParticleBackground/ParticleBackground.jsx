@@ -14,8 +14,8 @@ const ParticleBackground = () => {
       canvasBg: "#1f1d1d", // Dark background
       logoSize: 2200,
       distortionRadius: 2000,
-      forceStrength: 0.05,
-      maxDisplacement: 1000,
+      forceStrength: 0.02,
+      maxDisplacement: 600,
       returnForce: 0.1,
       logoPath: "/varun-agro.svg",
       particleSpacing: 2,
@@ -187,7 +187,7 @@ const ParticleBackground = () => {
               242 / 255,
               237 / 255,
               230 / 255,
-              (pixels[idx + 3] / 255) * 0.8
+              (pixels[idx + 3] / 255) * 0.4
             );
             particles.push({ ox: x, oy: y, vx: 0, vy: 0 });
           }
