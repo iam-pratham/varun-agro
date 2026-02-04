@@ -162,7 +162,10 @@ const ParticleBackground = () => {
     const createParticles = (pixels) => {
       const cx = canvas.width / 2;
       const cy = canvas.height / 2;
-      const scale = Math.min(window.innerWidth / 1920, 1) * 1.2;
+      // Calculate scale to fit width (accounting for internal padding)
+      // The logo takes up 90% of the grid internally (s = logoSize * 0.9)
+      // So setting scale = width / logoSize makes the logo occupy 90% of screen width
+      const scale = Math.min(window.innerWidth / config.logoSize, 1.2); 
       const dim = config.logoSize;
       const spacing = config.particleSpacing;
 
