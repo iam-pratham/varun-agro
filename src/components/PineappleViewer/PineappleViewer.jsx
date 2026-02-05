@@ -14,6 +14,7 @@ const PineappleViewer = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
+    let isMounted = true;
 
     // --- SCENE SETUP ---
     const width = containerRef.current.clientWidth;
@@ -58,15 +59,15 @@ const PineappleViewer = () => {
 
         // Apply static tilt to the GROUP (the axis holder)
         // This ensures the model rotates around this tilted axis
-        group.rotation.set(0.2, 0, -0.6);
+        group.rotation.set(0.1, 0, -0.6);
         
-        // Move slightly to left
-        group.position.x = 0.1;
-        group.position.y = -0.1; 
+        // Reset position for the new layout
+        group.position.x = 0;
+        group.position.y = 0; 
 
         // Calculate camera distance to fit
-        // Reduced to 0.9 to make it bigger (was 1.3)
-        const cameraDistance = 1.2; 
+        // Adjusted for the new split layout
+        const cameraDistance = 1.8; 
         const maxDim = Math.max(modelSize.x, modelSize.y, modelSize.z);
         
         camera.position.set(0, 0, maxDim * cameraDistance);
@@ -78,7 +79,8 @@ const PineappleViewer = () => {
     loader.load(
       "/3D/pineapple.glb",
       (gltf) => {
-        const model = gltf.scene;
+        if (!isMounted) return; // Prevent adding to a dead scene
+        const model = gltf.scene.clone();
         modelRef.current = model;
 
         // Center the model geometry
@@ -110,7 +112,7 @@ const PineappleViewer = () => {
       if (modelRef.current) {
         // Rotate the model around its own Y axis
         // Since the parent group is tilted, this looks like spinning on a tilted axis
-        modelRef.current.rotation.y += 0.005; 
+        modelRef.current.rotation.y += 0.015; 
       }
 
       renderer.render(scene, camera);
@@ -131,11 +133,17 @@ const PineappleViewer = () => {
 
     // --- CLEANUP ---
     return () => {
+      isMounted = false; // Prevent async callbacks from acting
       window.removeEventListener("resize", handleResize);
       if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
       if (rendererRef.current) {
         rendererRef.current.dispose();
       }
+      // Clear references to prevent stale state in next render cycle
+      modelRef.current = null;
+      groupRef.current = null;
+      cameraRef.current = null;
+      rendererRef.current = null;
     };
   }, []);
 

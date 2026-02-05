@@ -26,16 +26,16 @@ const Spotlight = () => {
   };
 
   const spotlightItems = [
-    { name: "2010 - Company Registration", img: "/spotlight/spotlight-img-1.jpg" },
-    { name: "2012 - Tomato Pulp", img: "/spotlight/spotlight-img-2.jpg" },
-    { name: "2013 - Mango Concentrates", img: "/spotlight/spotlight-img-3.jpg" },
-    { name: "2014 - Papaya Pulp", img: "/spotlight/spotlight-img-4.jpg" },
-    { name: "2015 - Banana Pulp", img: "/spotlight/spotlight-img-5.jpg" },
-    { name: "2016 - Lime Pulp", img: "/spotlight/spotlight-img-6.jpg" },
-    { name: "2019 - Zingat Ketchup Brand", img: "/spotlight/spotlight-img-7.jpg" },
-    { name: "2020 - Frozen Fruits & Vegetables", img: "/spotlight/spotlight-img-8.jpg" },
-    { name: "2021 - Jamun Pulp", img: "/spotlight/spotlight-img-9.jpg" },
-    { name: "2022 - Strawberry Pulp", img: "/spotlight/spotlight-img-10.jpg" },
+    { name: "2010 - Company Registration", img: "/spotlight/2010.jpeg" },
+    { name: "2012 - Tomato Pulp", img: "/spotlight/2012.jpeg" },
+    { name: "2013 - Mango Concentrates", img: "/spotlight/2013.jpeg" },
+    { name: "2014 - Papaya Pulp", img: "/spotlight/2014.jpeg" },
+    { name: "2015 - Banana Pulp", img: "/spotlight/2015.jpeg" },
+    { name: "2016 - Lime Pulp", img: "/spotlight/2016.jpeg" },
+    { name: "2019 - Zingat Ketchup Brand", img: "/spotlight/2019.jpeg" },
+    { name: "2020 - Frozen Fruits & Vegetables", img: "/spotlight/2020.jpeg" },
+    { name: "2021 - Jamun Pulp", img: "/spotlight/2021.jpeg" },
+    { name: "2022 - Strawberry Pulp", img: "/spotlight/2022.jpeg" },
   ];
 
   useEffect(() => {
@@ -294,7 +294,7 @@ const Spotlight = () => {
           </div>
         </div>
         <div className="spotlight-bg-img">
-          <img src="/spotlight/spotlight-img-1.jpg" alt="" />
+          <img src="/spotlight/2010.jpeg" alt="" />
         </div>
       </div>
       <div

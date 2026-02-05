@@ -8,7 +8,7 @@
   --base-350: rgb(128, 119, 108);
   --base-400: rgb(102, 95, 86);
   --base-450: rgb(31, 29, 29);
-  --base-500: rgb(20, 19, 19);
+  --base-500: #141414;
 }
 
 * {
@@ -20,7 +20,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #0d0c0c;
+  background-color: #141414;
   overflow-x: hidden;
 }
 

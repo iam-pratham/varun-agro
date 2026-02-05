@@ -109,10 +109,10 @@ const Footer = () => {
                   <h3>Industries</h3>
                 </a>
                 <a
-                  href="/spaces"
+                  href="/products"
                   onClick={(e) => {
                     e.preventDefault();
-                    navigateWithTransition("/spaces");
+                    navigateWithTransition("/products");
                   }}
                 >
                   <h3>Products</h3>
@@ -157,8 +157,7 @@ const Footer = () => {
             <p>
               Developed by — <span>Varun Agro</span>
             </p>
-            <p>This website is using cookies.</p>
-            <p>All rights reserverd &copy; 2025</p>
+            <p>All rights reserverd &copy; 2026</p>
           </div>
         </div>
       </div>
@@ -167,3 +166,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// Force re-render

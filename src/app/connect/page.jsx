@@ -13,49 +13,57 @@ const page = () => {
       <div className="page contact">
         <section className="contact-hero">
           <div className="container">
-            <div className="contact-col">
-              <div className="contact-hero-header">
-                <Copy delay={0.85}>
-                  <h1>Connect with Varun Agro</h1>
+            <div className="contact-text-side">
+              <div className="contact-header">
+                <Copy delay={0.5}>
+                  <h1>Connect with<br />Varun Agro</h1>
                 </Copy>
               </div>
-              <div className="contact-copy-year">
-                <Copy delay={0.1}>
-                  <h1>&copy;26</h1>
-                </Copy>
-              </div>
-            </div>
-            <div className="contact-col">
-              <div className="contact-info">
-                <div className="contact-info-block">
-                  <Copy delay={0.85}>
-                    <p>General Inquiries</p>
+              
+              <div className="contact-details-grid">
+                <div className="contact-block">
+                  <Copy delay={0.7}>
+                    <h3>General Inquiries</h3>
                     <p>contact@varunagrofoods.com</p>
                   </Copy>
                 </div>
-                <div className="contact-info-block">
-                  <Copy delay={1}>
-                    <p>Sales & Exports</p>
+                
+                <div className="contact-block">
+                  <Copy delay={0.8}>
+                    <h3>Sales & Exports</h3>
                     <p>sales@varunagrofoods.com</p>
                     <p>+91 (Nashik) 422003</p>
                   </Copy>
                 </div>
-                <div className="contact-info-block">
-                  <Copy delay={1.15}>
-                    <p>Headquarters</p>
+                
+                <div className="contact-block">
+                  <Copy delay={0.9}>
+                    <h3>Headquarters</h3>
                     <p>Gat No-181, Capital Hill,</p>
                     <p>Umrale (B.K.), Nashik-422003</p>
                   </Copy>
                 </div>
-                <div className="contact-info-block">
-                  <Copy delay={1.3}>
-                    <p>Follow Us</p>
-                    <p>LinkedIn</p>
-                    <p>Instagram</p>
+                
+                <div className="contact-block">
+                  <Copy delay={1.0}>
+                    <h3>Follow Us</h3>
+                    <div className="social-links">
+                      <p>LinkedIn</p>
+                      <p>Instagram</p>
+                    </div>
                   </Copy>
                 </div>
               </div>
-              <div className="contact-img">
+
+              <div className="contact-footer">
+                 <Copy delay={1.1}>
+                    <h1>&copy; 2026 Varun Agro</h1>
+                 </Copy>
+              </div>
+            </div>
+
+            <div className="contact-visual-side">
+              <div className="pineapple-container">
                 <PineappleViewer />
               </div>
             </div>

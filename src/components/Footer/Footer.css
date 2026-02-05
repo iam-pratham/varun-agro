@@ -118,14 +118,12 @@
 
 .footer-copyright p:nth-child(2) {
   display: flex;
-  text-align: center;
-  justify-content: center;
+  justify-content: flex-end;
+  text-align: right;
 }
 
 .footer-copyright p:nth-child(3) {
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
+  display: none;
 }
 
 @media (max-width: 1000px) {

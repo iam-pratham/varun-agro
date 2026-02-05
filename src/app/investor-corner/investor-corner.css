@@ -1,0 +1,177 @@
+.investor-page {
+  padding-top: 8rem;
+  background-color: var(--base-500);
+  color: var(--base-100);
+  min-height: 100vh;
+}
+
+.investor-hero {
+  padding: 4rem 0 6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.investor-hero h1 {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+  color: var(--base-100);
+}
+
+.investor-hero p {
+  font-size: 1.25rem;
+  max-width: 60%;
+  color: var(--base-200);
+}
+
+/* Investor Relations Section */
+.investor-relations {
+  padding: 6rem 0;
+  background-color: var(--base-500);
+}
+
+.ir-header {
+  margin-bottom: 4rem;
+}
+
+.ir-header h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--base-100);
+  letter-spacing: 0.05em;
+}
+
+.ir-subtitle {
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--base-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.ir-links-section h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: var(--base-100);
+}
+
+.ir-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ir-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ir-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.ir-card span {
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--base-200);
+  font-weight: 500;
+}
+
+.ir-card-icon {
+  font-size: 2rem;
+  color: var(--base-100);
+}
+
+/* Additional Sections */
+.investor-governance,
+.investor-contact {
+  padding: 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--base-100);
+}
+
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.governance-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.governance-item h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--base-100);
+}
+
+.governance-item p {
+  color: var(--base-300);
+  font-size: 0.9rem;
+  font-family: "DM Mono", monospace;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-block h5 {
+  font-size: 1.1rem;
+  color: var(--base-200);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: "DM Mono", monospace;
+}
+
+.contact-block p {
+  font-size: 1.25rem;
+  color: var(--base-100);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .investor-hero h1 {
+    font-size: 3rem;
+  }
+  
+  .investor-hero p {
+    max-width: 100%;
+  }
+  
+  .ir-cards {
+    flex-direction: column;
+  }
+  
+  .ir-card {
+    min-width: 100%;
+    height: 150px;
+  }
+}

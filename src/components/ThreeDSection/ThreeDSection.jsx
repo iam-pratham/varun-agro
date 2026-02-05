@@ -20,6 +20,7 @@ const ThreeDSection = () => {
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
   const sceneRef = useRef(null);
+  const shouldRenderRef = useRef(false);
 
   // Helper to setup model position/rotation
   const setupModel = () => {
@@ -76,7 +77,7 @@ const ThreeDSection = () => {
         // Scramble Headers
         const chars = container.querySelectorAll("h2 .char");
         chars.forEach((char, i) => {
-            const originalChar = char.innerText;
+            const originalChar = char.textContent;
             const randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             
             // Initial State
@@ -94,11 +95,11 @@ const ThreeDSection = () => {
                 onUpdate: function() {
                     const progress = this.progress();
                     if (progress < 1) {
-                        char.innerText = randomChars[Math.floor(Math.random() * randomChars.length)];
+                        char.textContent = randomChars[Math.floor(Math.random() * randomChars.length)];
                     }
                 },
                 onComplete: () => {
-                    char.innerText = originalChar;
+                    char.textContent = originalChar;
                 }
             });
         });
@@ -301,7 +302,12 @@ const ThreeDSection = () => {
     );
     cameraRef.current = camera;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ 
+        antialias: window.devicePixelRatio < 2, 
+        alpha: true,
+        powerPreference: "high-performance",
+        stencil: false
+    });
     rendererRef.current = renderer;
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(width, height);
@@ -326,8 +332,8 @@ const ThreeDSection = () => {
     mainLight.position.set(1, 2, 3);
     mainLight.castShadow = true;
     mainLight.shadow.bias = -0.001;
-    mainLight.shadow.mapSize.width = 1024;
-    mainLight.shadow.mapSize.height = 1024;
+    mainLight.shadow.mapSize.width = 512;
+    mainLight.shadow.mapSize.height = 512;
     scene.add(mainLight);
 
     const fillLight = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -365,11 +371,27 @@ const ThreeDSection = () => {
       setupModel();
     });
 
+    // Intersection Observer to optimize performance
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                shouldRenderRef.current = entry.isIntersecting;
+            });
+        },
+        { rootMargin: "100px" }
+    );
+    
+    if (containerRef.current) {
+        observer.observe(containerRef.current);
+    }
+
     // Animation Loop
     let animationId;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      renderer.render(scene, camera);
+      if (shouldRenderRef.current && renderer && scene && camera) {
+        renderer.render(scene, camera);
+      }
     };
     animate();
 
@@ -389,6 +411,7 @@ const ThreeDSection = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
+        observer.disconnect();
         window.removeEventListener("resize", handleResize);
         cancelAnimationFrame(animationId);
         if (renderer) renderer.dispose();

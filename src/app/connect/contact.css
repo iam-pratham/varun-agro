@@ -1,90 +1,167 @@
 .contact-hero {
   position: relative;
-  width: 100vw;
-  height: 100%;
-  overflow: hidden;
-  padding: 15svh 0 10svh 0;
+  width: 100%; /* Changed from 100vw to match viewport width exactly */
+  min-height: 100vh;
+  padding: 0;
   color: var(--base-200);
+  background-color: var(--base-500);
+  overflow: hidden;
 }
 
 .contact-hero .container {
   display: flex;
-  gap: 2rem;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+  position: relative; /* For absolute divider */
 }
 
-.contact-hero .container .contact-col:nth-child(1) {
-  flex: 4;
+/* Central Divider */
+.contact-hero .container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Left Side - Text Content */
+.contact-text-side {
+  flex: 0 0 50%;
+  width: 50%;
+  padding: 8rem 4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.contact-hero .container .contact-col:nth-child(2) {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-hero .contact-hero-header h1 {
-  width: 60%;
-  color: var(--base-350);
-}
-
-.contact-hero .contact-copy-year h1 {
-  font-size: 20vw;
-  font-weight: 450;
-  color: var(--base-100);
-}
-
-.contact-hero .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 6rem;
-}
-
-.contact-hero .contact-info .contact-info-block p {
-  color: var(--base-100);
-  margin-bottom: 0.5rem;
-}
-
-.contact-hero .contact-info .contact-info-block p:nth-child(1) {
-  color: var(--base-300);
-}
-
-.contact-hero .contact-img {
-  aspect-ratio: 1;
-  border-radius: 2rem;
-  /* overflow: hidden; */
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
-  overflow: visible;
+  z-index: 2;
+  background-color: var(--base-500);
+  box-sizing: border-box;
 }
 
-.contact-hero .contact-img > div {
-  width: 120% !important;
-  height: 120% !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact-header h1 {
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--base-100);
+  margin-bottom: 4rem;
 }
 
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: auto;
+  margin-bottom: 4rem;
+}
+
+.contact-block h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--base-350);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.contact-block p {
+  font-size: 1.25rem;
+  color: var(--base-100);
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links p {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.social-links p:hover {
+  opacity: 0.7;
+}
+
+.contact-footer h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--base-100);
+  opacity: 0.5;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Right Side - Visual */
+.contact-visual-side {
+  flex: 0 0 50%;
+  width: 50%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-500); /* Seamless integration with the rest of the page */
+  box-sizing: border-box;
+}
+
+.pineapple-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pineapple-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive */
 @media (max-width: 1000px) {
   .contact-hero .container {
     flex-direction: column;
-    gap: 6rem;
+    height: auto;
   }
 
-  .contact-hero .container .contact-col:nth-child(1) {
-    flex-direction: column-reverse;
-    gap: 1rem;
+  .contact-hero .container::after {
+    display: none; /* Hide vertical divider on mobile */
   }
 
-  .contact-hero .contact-hero-header h1 {
+  .contact-text-side {
     width: 100%;
+    flex: auto;
+    padding: 6rem 2rem 2rem 2rem;
+    order: 2;
   }
 
-  .contact-hero .contact-copy-year h1 {
+  .contact-header h1 {
     font-size: 3rem;
+  }
+
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-footer h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-visual-side {
+    width: 100%;
+    flex: auto;
+    height: 50vh;
+    order: 1;
   }
 }

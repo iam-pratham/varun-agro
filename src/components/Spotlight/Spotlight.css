@@ -46,6 +46,8 @@
   transform: translateY(-50%);
   display: flex;
   gap: 0.5rem;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .spotlight-intro-text {
@@ -163,6 +165,7 @@
   will-change: transform;
   border-radius: 1rem;
   overflow: hidden;
+  opacity: 0;
 }
 
 .spotlight-img img {
