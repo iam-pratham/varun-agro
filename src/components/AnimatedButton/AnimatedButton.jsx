@@ -10,7 +10,9 @@ import { useViewTransition } from "@/hooks/useViewTransition";
 
 import { IoMdArrowForward } from "react-icons/io";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+}
 
 const AnimatedButton = ({
   label,

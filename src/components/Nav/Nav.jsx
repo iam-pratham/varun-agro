@@ -18,7 +18,9 @@ import { useLenis } from "lenis/react";
 import MenuBtn from "../MenuBtn/MenuBtn";
 import { useViewTransition } from "@/hooks/useViewTransition";
 
-gsap.registerPlugin(SplitText);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(SplitText);
+}
 
 const Nav = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -254,13 +256,13 @@ const Nav = () => {
                 </a>
               </div>
               <div className="link">
-            <a
-              href="/products"
-              onClick={(e) => handleLinkClick(e, "/products")}
-            >
-              <h2>Products</h2>
-            </a>
-          </div>
+                <a
+                  href="/products"
+                  onClick={(e) => handleLinkClick(e, "/products")}
+                >
+                  <h2>Products</h2>
+                </a>
+              </div>
               <div className="link">
                 <a
                   href="/connect"

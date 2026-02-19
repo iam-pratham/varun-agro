@@ -15,7 +15,9 @@ import { RiInstagramLine } from "react-icons/ri";
 import { RiDribbbleLine } from "react-icons/ri";
 import { RiYoutubeLine } from "react-icons/ri";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const Footer = () => {
   const { navigateWithTransition } = useViewTransition();

@@ -9,7 +9,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useViewTransition } from "@/hooks/useViewTransition";
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const TopBar = () => {
   const topBarRef = useRef(null);

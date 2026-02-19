@@ -24,6 +24,7 @@ const products = [
   // FRUIT PUREES & CONCENTRATES
   {
     id: "tomato-crush-puree",
+    sku: "37463",
     category: "purees-concentrates",
     title: "Tomato Crush Puree",
     description: "High-quality tomato crush puree made from fresh, sun-ripened tomatoes.",
@@ -32,6 +33,7 @@ const products = [
   },
   {
     id: "tomato-crush-concentrate",
+    sku: "37471",
     category: "purees-concentrates",
     title: "Tomato Crush Concentrate",
     description: "Concentrated tomato crush for versatile culinary applications.",
@@ -40,6 +42,7 @@ const products = [
   },
   {
     id: "tomato-paste",
+    sku: "37474",
     category: "purees-concentrates",
     title: "Tomato Paste",
     description: "Thick, rich tomato paste perfect for sauces and bases.",
@@ -48,6 +51,7 @@ const products = [
   },
   {
     id: "pink-guava-puree",
+    sku: "37481",
     category: "purees-concentrates",
     title: "Pink Guava Puree",
     description: "Natural pink guava puree with authentic tropical flavor.",
@@ -56,6 +60,7 @@ const products = [
   },
   {
     id: "rajapuri-mango-puree",
+    sku: "37485",
     category: "purees-concentrates",
     title: "Rajapuri Mango Puree",
     description: "Distinctive Rajapuri mango puree known for its size and sweetness.",
@@ -64,6 +69,7 @@ const products = [
   },
   {
     id: "kesar-mango-puree",
+    sku: "37486",
     category: "purees-concentrates",
     title: "Kesar Mango Puree",
     description: "Saffron-colored Kesar mango puree with intense aroma.",
@@ -72,6 +78,7 @@ const products = [
   },
   {
     id: "banana-concentrate",
+    sku: "37487",
     category: "purees-concentrates",
     title: "Banana Concentrate",
     description: "Concentrated banana goodness for beverages and baking.",
@@ -80,6 +87,7 @@ const products = [
   },
   {
     id: "banana-puree",
+    sku: "37488",
     category: "purees-concentrates",
     title: "Banana Puree",
     description: "Smooth banana puree made from ripe Cavendish bananas.",
@@ -88,6 +96,7 @@ const products = [
   },
   {
     id: "red-papaya-concentrate",
+    sku: "37492",
     category: "purees-concentrates",
     title: "Red Papaya Concentrate",
     description: "Concentrated red papaya for intense flavor and color.",
@@ -96,6 +105,7 @@ const products = [
   },
   {
     id: "red-papaya-puree",
+    sku: "37496",
     category: "purees-concentrates",
     title: "Red Papaya Puree",
     description: "Fresh red papaya puree suitable for juices and blends.",
@@ -104,6 +114,7 @@ const products = [
   },
   {
     id: "white-guava-concentrate",
+    sku: "37498",
     category: "purees-concentrates",
     title: "White Guava Concentrate",
     description: "Concentrated white guava flavor for industrial use.",
@@ -112,6 +123,7 @@ const products = [
   },
   {
     id: "white-guava-puree",
+    sku: "37500",
     category: "purees-concentrates",
     title: "White Guava Puree",
     description: "Classic white guava puree with a balanced sweet-tart profile.",
@@ -120,6 +132,7 @@ const products = [
   },
   {
     id: "totapuri-mango-puree",
+    sku: "37501",
     category: "purees-concentrates",
     title: "Totapuri Mango Puree",
     description: "Tangy and vibrant Totapuri mango puree.",
@@ -128,6 +141,7 @@ const products = [
   },
   {
     id: "totapuri-mango-concentrate",
+    sku: "37505",
     category: "purees-concentrates",
     title: "Totapuri Mango Concentrate",
     description: "Concentrated form of Totapuri mango for beverage manufacturing.",
@@ -136,6 +150,7 @@ const products = [
   },
   {
     id: "alphonso-mango-puree",
+    sku: "37507",
     category: "purees-concentrates",
     title: "Alphonso Mango Puree",
     description: "The King of Mangoes in a smooth, aromatic puree.",
@@ -144,6 +159,7 @@ const products = [
   },
   {
     id: "jamun-pulp",
+    sku: "37513",
     category: "purees-concentrates",
     title: "Jamun Pulp",
     description: "Rich, purple Jamun (Black Plum) pulp with unique astringency.",
@@ -152,6 +168,7 @@ const products = [
   },
   {
     id: "strawberry-pulp",
+    sku: "37515",
     category: "purees-concentrates",
     title: "Strawberry Pulp",
     description: "Vibrant red strawberry pulp for ice creams and toppings.",
@@ -159,75 +176,28 @@ const products = [
     image: "/products/strawberry-pulp.jpg"
   },
   {
-    id: "lime-pulp",
-    category: "purees-concentrates",
-    title: "Lime Pulp",
-    description: "Zesty lime pulp for beverages and culinary use.",
-    specs: ["High Acidity", "Frozen", "Fresh Aroma"],
-    image: "/products/lime-pulp.jpg"
-  },
-  {
     id: "red-chilli-paste",
+    sku: "37518",
     category: "purees-concentrates",
     title: "Red Chilli Paste",
     description: "Spicy red chilli paste for adding heat and color.",
     specs: ["Hot", "Consistent Texture", "Vibrant Red"],
     image: "/products/red-chilli-paste.jpg"
   },
-
-  // CHOW
   {
-    id: "green-peas-chow",
-    category: "chow",
-    title: "Green Peas Chow",
-    description: "Savory chow made from fresh green peas.",
-    specs: ["Ready to Eat", "Savory", "Unique Blend"],
-    image: "/products/green-peas-chow.jpg"
-  },
-  {
-    id: "mango-chow",
-    category: "chow",
-    title: "Mango Chow",
-    description: "Tangy and spicy mango chow.",
-    specs: ["Traditional Recipe", "Tangy", "Spicy"],
-    image: "/products/mango-chow.jpg"
-  },
-  {
-    id: "strawberry-banana-chow",
-    category: "chow",
-    title: "Strawberry & Banana Chow",
-    description: "A delightful mix of strawberry and banana flavors.",
-    specs: ["Sweet", "Fruity", "Dessert Topping"],
-    image: "/products/strawberry-banana-chow.jpg"
-  },
-  {
-    id: "strawberry-chow",
-    category: "chow",
-    title: "Strawberry Chow",
-    description: "Pure strawberry goodness in a chow format.",
-    specs: ["Sweet", "Red", "Berry Flavor"],
-    image: "/products/strawberry-chow.jpg"
-  },
-  {
-    id: "sweet-corn-chow",
-    category: "chow",
-    title: "Sweet Corn Chow",
-    description: "Creamy and sweet corn chow.",
-    specs: ["Sweet", "Creamy", "Corn Base"],
-    image: "/products/sweet-corn-chow.jpg"
-  },
-  {
-    id: "pineapple-papaya-chow",
-    category: "chow",
-    title: "Pineapple & Papaya Chow",
-    description: "Tropical blend of pineapple and papaya.",
-    specs: ["Tropical", "Sweet & Tangy", "Refreshing"],
-    image: "/products/pineapple-papaya-chow.jpg"
+    id: "lime-pulp",
+    sku: "37521",
+    category: "purees-concentrates",
+    title: "Lime Pulp",
+    description: "Zesty lime pulp for beverages and culinary use.",
+    specs: ["High Acidity", "Frozen", "Fresh Aroma"],
+    image: "/products/lime-pulp.jpg"
   },
 
   // FREEZE DRIED
   {
     id: "fd-strawberry-whole",
+    sku: "37541",
     category: "freeze-dried",
     title: "Strawberry (Whole)",
     description: "Whole freeze-dried strawberries retaining shape and flavor.",
@@ -236,6 +206,7 @@ const products = [
   },
   {
     id: "fd-alphonso-mango",
+    sku: "37570",
     category: "freeze-dried",
     title: "Alphonso Mango (Slice & Powder)",
     description: "Premium Alphonso mango available in slices or powder.",
@@ -244,6 +215,7 @@ const products = [
   },
   {
     id: "fd-banana-slice",
+    sku: "37573",
     category: "freeze-dried",
     title: "Banana (Slice)",
     description: "Crunchy freeze-dried banana slices.",
@@ -252,6 +224,7 @@ const products = [
   },
   {
     id: "fd-pineapple-dice",
+    sku: "37576",
     category: "freeze-dried",
     title: "Pineapple (Dice)",
     description: "Tangy pineapple dices, freeze-dried to perfection.",
@@ -260,6 +233,7 @@ const products = [
   },
   {
     id: "fd-pumpkin-dice",
+    sku: "37577",
     category: "freeze-dried",
     title: "Pumpkin (Dice)",
     description: "Versatile pumpkin dices for soups and baking.",
@@ -268,6 +242,7 @@ const products = [
   },
   {
     id: "fd-yam-dice",
+    sku: "37579",
     category: "freeze-dried",
     title: "Yam (Dice)",
     description: "Freeze-dried yam dices for convenient cooking.",
@@ -276,6 +251,7 @@ const products = [
   },
   {
     id: "fd-okra-ring",
+    sku: "37581",
     category: "freeze-dried",
     title: "Okra Ring",
     description: "Crispy okra rings, perfect for snacking or curries.",
@@ -284,6 +260,7 @@ const products = [
   },
   {
     id: "fd-sweetcorn-kernel",
+    sku: "37593",
     category: "freeze-dried",
     title: "Sweet Corn Kernel",
     description: "Sweet corn kernels that rehydrate instantly.",
@@ -292,6 +269,7 @@ const products = [
   },
   {
     id: "fd-mushroom",
+    sku: "37596",
     category: "freeze-dried",
     title: "Mushroom",
     description: "Earthy mushrooms preserved via freeze-drying.",
@@ -300,6 +278,7 @@ const products = [
   },
   {
     id: "fd-sweet-potato",
+    sku: "37616",
     category: "freeze-dried",
     title: "Sweet Potato",
     description: "Sweet potato pieces for various applications.",
@@ -308,6 +287,7 @@ const products = [
   },
   {
     id: "fd-tomato-dice",
+    sku: "37623",
     category: "freeze-dried",
     title: "Tomato (Dice)",
     description: "Diced tomatoes perfect for instant mixes.",
@@ -316,6 +296,7 @@ const products = [
   },
   {
     id: "fd-basil",
+    sku: "37698",
     category: "freeze-dried",
     title: "Basil",
     description: "Aromatic basil leaves freeze-dried to keep fresh flavor.",
@@ -324,6 +305,7 @@ const products = [
   },
   {
     id: "fd-ginger",
+    sku: "37700",
     category: "freeze-dried",
     title: "Ginger",
     description: "Pungent ginger pieces or powder.",
@@ -332,6 +314,7 @@ const products = [
   },
   {
     id: "fd-broccoli",
+    sku: "37702",
     category: "freeze-dried",
     title: "Broccoli",
     description: "Nutrient-rich broccoli florets.",
@@ -340,6 +323,7 @@ const products = [
   },
   {
     id: "fd-carrot",
+    sku: "37704",
     category: "freeze-dried",
     title: "Carrot",
     description: "Sweet carrot pieces for instant foods.",
@@ -348,6 +332,7 @@ const products = [
   },
   {
     id: "fd-beetroot",
+    sku: "37707",
     category: "freeze-dried",
     title: "Beetroot",
     description: "Earthy beetroot pieces with deep color.",
@@ -356,6 +341,7 @@ const products = [
   },
   {
     id: "fd-lemon-grass",
+    sku: "37757",
     category: "freeze-dried",
     title: "Lemon Grass",
     description: "Citrusy lemon grass for teas and asian cuisine.",
@@ -364,6 +350,7 @@ const products = [
   },
   {
     id: "fd-asparagus",
+    sku: "37758",
     category: "freeze-dried",
     title: "Asparagus",
     description: "Premium asparagus spears.",
@@ -372,6 +359,7 @@ const products = [
   },
   {
     id: "fd-leek-spring-onion",
+    sku: "37766",
     category: "freeze-dried",
     title: "Leek Spring Onion",
     description: "A blend or choice of leeks and spring onions.",
@@ -380,6 +368,7 @@ const products = [
   },
   {
     id: "fd-coriander",
+    sku: "37768",
     category: "freeze-dried",
     title: "Coriander",
     description: "Fresh coriander leaves preserved perfectly.",
@@ -388,6 +377,7 @@ const products = [
   },
   {
     id: "fd-mint",
+    sku: "37770",
     category: "freeze-dried",
     title: "Mint",
     description: "Refreshing mint leaves.",
@@ -398,6 +388,7 @@ const products = [
   // FROZEN FRUITS & VEGETABLES
   {
     id: "frozen-mango-dice",
+    sku: "37772",
     category: "frozen-fruits-vegetables",
     title: "Mango (Dice)",
     description: "IQF mango dices, ready to use.",
@@ -406,6 +397,7 @@ const products = [
   },
   {
     id: "frozen-strawberry",
+    sku: "37775",
     category: "frozen-fruits-vegetables",
     title: "Strawberry",
     description: "Whole or sliced IQF strawberries.",
@@ -414,6 +406,7 @@ const products = [
   },
   {
     id: "frozen-pomegranate-arils",
+    sku: "37777",
     category: "frozen-fruits-vegetables",
     title: "Pomegranate Arils",
     description: "Fresh frozen pomegranate arils.",
@@ -422,6 +415,7 @@ const products = [
   },
   {
     id: "frozen-papaya-dice",
+    sku: "37779",
     category: "frozen-fruits-vegetables",
     title: "Papaya (Dice)",
     description: "IQF papaya dices.",
@@ -430,6 +424,7 @@ const products = [
   },
   {
     id: "frozen-muskmelon-dice-balls",
+    sku: "37781",
     category: "frozen-fruits-vegetables",
     title: "Muskmelon (Dice/Balls)",
     description: "Sweet muskmelon available in dices or balls.",
@@ -438,6 +433,7 @@ const products = [
   },
   {
     id: "frozen-pineapple-dice",
+    sku: "37783",
     category: "frozen-fruits-vegetables",
     title: "Pineapple (Dice)",
     description: "IQF pineapple dices.",
@@ -446,6 +442,7 @@ const products = [
   },
   {
     id: "frozen-sweet-corn-kernels",
+    sku: "37785",
     category: "frozen-fruits-vegetables",
     title: "Sweet Corn Kernels",
     description: "IQF sweet corn kernels.",
@@ -454,6 +451,7 @@ const products = [
   },
   {
     id: "frozen-tomato-dice",
+    sku: "37787",
     category: "frozen-fruits-vegetables",
     title: "Tomato (Dice)",
     description: "IQF tomato dices.",
@@ -462,6 +460,7 @@ const products = [
   },
   {
     id: "frozen-sweet-potato",
+    sku: "37789",
     category: "frozen-fruits-vegetables",
     title: "Sweet Potato",
     description: "IQF sweet potato.",
@@ -470,6 +469,7 @@ const products = [
   },
   {
     id: "frozen-radish",
+    sku: "37791",
     category: "frozen-fruits-vegetables",
     title: "Radish",
     description: "IQF radish pieces.",
@@ -478,6 +478,7 @@ const products = [
   },
   {
     id: "frozen-pumpkin",
+    sku: "37793",
     category: "frozen-fruits-vegetables",
     title: "Pumpkin",
     description: "IQF pumpkin pieces.",
@@ -486,6 +487,7 @@ const products = [
   },
   {
     id: "frozen-green-pepper",
+    sku: "37795",
     category: "frozen-fruits-vegetables",
     title: "Green Pepper",
     description: "IQF green pepper (capsicum).",
@@ -494,6 +496,7 @@ const products = [
   },
   {
     id: "frozen-baby-corn",
+    sku: "37797",
     category: "frozen-fruits-vegetables",
     title: "Baby Corn",
     description: "IQF baby corn.",
@@ -502,6 +505,7 @@ const products = [
   },
   {
     id: "frozen-edamame",
+    sku: "37799",
     category: "frozen-fruits-vegetables",
     title: "Edamame",
     description: "IQF edamame beans.",
@@ -510,6 +514,7 @@ const products = [
   },
   {
     id: "frozen-cabbage",
+    sku: "37802",
     category: "frozen-fruits-vegetables",
     title: "Cabbage",
     description: "IQF cabbage shreds.",
@@ -518,6 +523,7 @@ const products = [
   },
   {
     id: "frozen-ginger",
+    sku: "37807",
     category: "frozen-fruits-vegetables",
     title: "Ginger",
     description: "IQF ginger pieces.",
@@ -526,6 +532,7 @@ const products = [
   },
   {
     id: "frozen-green-chilli",
+    sku: "37810",
     category: "frozen-fruits-vegetables",
     title: "Green Chilli",
     description: "IQF green chillies.",
@@ -534,6 +541,7 @@ const products = [
   },
   {
     id: "frozen-asparagus",
+    sku: "37812",
     category: "frozen-fruits-vegetables",
     title: "Asparagus",
     description: "IQF asparagus.",
@@ -542,6 +550,7 @@ const products = [
   },
   {
     id: "frozen-sweet-corn-cob",
+    sku: "37814",
     category: "frozen-fruits-vegetables",
     title: "Sweet Corn & Cob",
     description: "IQF sweet corn on the cob or kernels.",
@@ -550,6 +559,7 @@ const products = [
   },
   {
     id: "frozen-onion-dice",
+    sku: "37816",
     category: "frozen-fruits-vegetables",
     title: "Onion (Dice)",
     description: "IQF onion dices.",
@@ -558,6 +568,7 @@ const products = [
   },
   {
     id: "frozen-green-peas",
+    sku: "37818",
     category: "frozen-fruits-vegetables",
     title: "Green Peas",
     description: "IQF green peas.",
@@ -566,6 +577,7 @@ const products = [
   },
   {
     id: "frozen-scotch-bonnet",
+    sku: "37820",
     category: "frozen-fruits-vegetables",
     title: "Scotch Bonnet Pepper",
     description: "IQF Scotch Bonnet peppers.",
@@ -574,6 +586,7 @@ const products = [
   },
   {
     id: "frozen-cauliflower",
+    sku: "37906",
     category: "frozen-fruits-vegetables",
     title: "Cauliflower",
     description: "IQF cauliflower florets.",
@@ -582,6 +595,7 @@ const products = [
   },
   {
     id: "frozen-carrot",
+    sku: "37908",
     category: "frozen-fruits-vegetables",
     title: "Carrot",
     description: "IQF carrot pieces.",
@@ -589,7 +603,17 @@ const products = [
     image: "/products/frozen-carrot.jpg"
   },
   {
+    id: "frozen-beetroot",
+    sku: "37910",
+    category: "frozen-fruits-vegetables",
+    title: "Beetroot",
+    description: "IQF beetroot pieces.",
+    specs: ["IQF", "Diced", "Red"],
+    image: "/products/frozen-beetroot.jpg"
+  },
+  {
     id: "frozen-bitter-gourd",
+    sku: "37912",
     category: "frozen-fruits-vegetables",
     title: "Bitter Gourd",
     description: "IQF bitter gourd slices.",
@@ -598,6 +622,7 @@ const products = [
   },
   {
     id: "frozen-broccoli",
+    sku: "37914",
     category: "frozen-fruits-vegetables",
     title: "Broccoli",
     description: "IQF broccoli florets.",
@@ -605,9 +630,66 @@ const products = [
     image: "/products/frozen-broccoli.jpg"
   },
 
+  // CHOW
+  {
+    id: "green-peas-chow",
+    sku: "38614",
+    category: "chow",
+    title: "Green Peas Chow",
+    description: "Savory chow made from fresh green peas.",
+    specs: ["Ready to Eat", "Savory", "Unique Blend"],
+    image: "/products/green-peas-chow.jpg"
+  },
+  {
+    id: "mango-chow",
+    sku: "38616",
+    category: "chow",
+    title: "Mango Chow",
+    description: "Tangy and spicy mango chow.",
+    specs: ["Traditional Recipe", "Tangy", "Spicy"],
+    image: "/products/mango-chow.jpg"
+  },
+  {
+    id: "strawberry-banana-chow",
+    sku: "38617",
+    category: "chow",
+    title: "Strawberry & Banana Chow",
+    description: "A delightful mix of strawberry and banana flavors.",
+    specs: ["Sweet", "Fruity", "Dessert Topping"],
+    image: "/products/strawberry-banana-chow.jpg"
+  },
+  {
+    id: "strawberry-chow",
+    sku: "38618",
+    category: "chow",
+    title: "Strawberry Chow",
+    description: "Pure strawberry goodness in a chow format.",
+    specs: ["Sweet", "Red", "Berry Flavor"],
+    image: "/products/strawberry-chow.jpg"
+  },
+  {
+    id: "sweet-corn-chow",
+    sku: "38619",
+    category: "chow",
+    title: "Sweet Corn Chow",
+    description: "Creamy and sweet corn chow.",
+    specs: ["Sweet", "Creamy", "Corn Base"],
+    image: "/products/sweet-corn-chow.jpg"
+  },
+  {
+    id: "pineapple-papaya-chow",
+    sku: "38876",
+    category: "chow",
+    title: "Pineapple & Papaya Chow",
+    description: "Tropical blend of pineapple and papaya.",
+    specs: ["Tropical", "Sweet & Tangy", "Refreshing"],
+    image: "/products/pineapple-papaya-chow.jpg"
+  },
+
   // GRO
   {
     id: "gro-ketchup-1kg",
+    sku: "38613",
     category: "gro",
     title: "Gro Tomato Ketchup (1KG)",
     description: "Large family pack of Gro Tomato Ketchup.",
@@ -616,6 +698,7 @@ const products = [
   },
   {
     id: "gro-ketchup-200g",
+    sku: "38824",
     category: "gro",
     title: "Gro Tomato Ketchup (200g)",
     description: "Convenient 200g pack of Gro Tomato Ketchup.",
@@ -624,6 +707,7 @@ const products = [
   },
   {
     id: "gro-ketchup-950g",
+    sku: "38826",
     category: "gro",
     title: "Gro Tomato Ketchup (950g)",
     description: "Value pack of Gro Tomato Ketchup.",
@@ -632,6 +716,7 @@ const products = [
   },
   {
     id: "gro-ketchup-8g",
+    sku: "38894",
     category: "gro",
     title: "Gro Tomato Ketchup (8g)",
     description: "Single serve sachet of Gro Tomato Ketchup.",
@@ -642,6 +727,7 @@ const products = [
   // ZINGAT
   {
     id: "zingat-ketchup-950g",
+    sku: "38857",
     category: "zingat",
     title: "Tomato Ketchup (950g)",
     description: "Zingat brand tomato ketchup, tangy and sweet.",
@@ -650,6 +736,7 @@ const products = [
   },
   {
     id: "zingat-vinegar",
+    sku: "38858",
     category: "zingat",
     title: "Zingat Vinegar",
     description: "High quality vinegar for cooking and preservation.",
@@ -658,6 +745,7 @@ const products = [
   },
   {
     id: "zingat-gg-paste-450g",
+    sku: "38859",
     category: "zingat",
     title: "Ginger Garlic Paste (450g)",
     description: "Aromatic ginger garlic paste in a medium pack.",
@@ -666,6 +754,7 @@ const products = [
   },
   {
     id: "zingat-ketchup-130g",
+    sku: "38881",
     category: "zingat",
     title: "Tomato Ketchup (130g)",
     description: "Small pack of Zingat tomato ketchup.",
@@ -673,7 +762,17 @@ const products = [
     image: "/products/zingat-ketchup-130g.jpg"
   },
   {
+    id: "zingat-ketchup-misc",
+    sku: "38883",
+    category: "zingat",
+    title: "Tomato Ketchup",
+    description: "Zingat quality tomato ketchup.",
+    specs: ["Condiment", "Rich Taste", "Zingat Brand"],
+    image: "/products/zingat-ketchup-950g.jpg"
+  },
+  {
     id: "zingat-gg-paste-200g",
+    sku: "38886",
     category: "zingat",
     title: "Ginger Garlic Paste (200g)",
     description: "Small pack of aromatic ginger garlic paste.",
@@ -684,6 +783,7 @@ const products = [
   // ICE FARM
   {
     id: "ice-farm-peas",
+    sku: "38887",
     category: "ice-farm",
     title: "Frozen Green Peas",
     description: "Ice Farm brand frozen green peas.",
@@ -692,6 +792,7 @@ const products = [
   },
   {
     id: "ice-farm-corn",
+    sku: "38888",
     category: "ice-farm",
     title: "Frozen Sweet Corn",
     description: "Ice Farm brand frozen sweet corn.",
@@ -700,6 +801,7 @@ const products = [
   },
   {
     id: "ice-farm-mixed-veg",
+    sku: "38889",
     category: "ice-farm",
     title: "Frozen Mixed Vegetables",
     description: "Ice Farm brand frozen mixed vegetables.",
@@ -711,13 +813,14 @@ const products = [
 const ProductsPage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const ITEMS_PER_PAGE = 12;
   const containerRef = useRef(null);
   const lenis = useLenis();
 
   // Filter products
-  const filteredProducts = activeCategory === "all" 
-    ? products 
+  const filteredProducts = activeCategory === "all"
+    ? products
     : products.filter(p => p.category === activeCategory);
 
   // Pagination Logic
@@ -735,18 +838,16 @@ const ProductsPage = () => {
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
-      
+
       const scrollToProductTop = () => {
         const heroSection = document.querySelector('.products-hero');
         if (heroSection) {
-          // Calculate the document position of the bottom of the hero
           const targetY = heroSection.getBoundingClientRect().bottom + window.scrollY;
-          
+
           if (lenis) {
-            // Smooth scroll with custom duration and easing for a premium feel
-            lenis.scrollTo(targetY, { 
+            lenis.scrollTo(targetY, {
               duration: 1.5,
-              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
             });
           } else {
             window.scrollTo({ top: targetY, behavior: 'smooth' });
@@ -756,15 +857,12 @@ const ProductsPage = () => {
         }
       };
 
-      // Small timeout to allow state to propagate if needed, though usually not required for 'hero' position which is static.
-      // But let's call it immediately as the hero position is stable.
       scrollToProductTop();
     }
   };
 
   useGSAP(() => {
-    // Animate grid items when category or page changes
-    gsap.fromTo(".product-card", 
+    gsap.fromTo(".product-card",
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, stagger: 0.05, ease: "power2.out" }
     );
@@ -774,13 +872,13 @@ const ProductsPage = () => {
     <>
       <Nav />
       <div className="products-page" ref={containerRef}>
-        
+
         {/* HERO */}
         <section className="products-hero">
           <Copy>
             <h1>Our Products</h1>
             <p>
-              From the heart of the farm to your facility. Explore our range of premium, 
+              From the heart of the farm to your facility. Explore our range of premium,
               sustainably processed ingredients designed for global food industries.
             </p>
           </Copy>
@@ -806,12 +904,17 @@ const ProductsPage = () => {
           <div className="products-grid">
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
-                <div key={product.id} className="product-card">
+                <div
+                  key={product.id}
+                  className="product-card"
+                  onClick={() => setSelectedProduct(product)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div className="product-image">
                     {/* Placeholder for now - eventually use Next/Image with actual assets */}
                     <div style={{
-                      width: '100%', 
-                      height: '100%', 
+                      width: '100%',
+                      height: '100%',
                       background: 'linear-gradient(45deg, var(--base-450), var(--base-500))',
                       display: 'flex',
                       alignItems: 'center',
@@ -832,7 +935,7 @@ const ProductsPage = () => {
                     </div>
                     <p className="product-desc">{product.description}</p>
                     <div className="product-specs">
-                      {product.specs.map((spec, index) => (
+                      {product.specs.slice(0, 3).map((spec, index) => (
                         <span key={index} className="spec-tag">{spec}</span>
                       ))}
                     </div>
@@ -849,20 +952,20 @@ const ProductsPage = () => {
           {/* PAGINATION CONTROLS */}
           {totalPages > 1 && (
             <div className="pagination-controls">
-              <button 
-                className="pagination-btn" 
+              <button
+                className="pagination-btn"
                 disabled={currentPage === 1}
                 onClick={() => handlePageChange(currentPage - 1)}
               >
                 Previous
               </button>
-              
+
               <span className="pagination-info">
                 Page {currentPage} of {totalPages}
               </span>
-              
-              <button 
-                className="pagination-btn" 
+
+              <button
+                className="pagination-btn"
                 disabled={currentPage === totalPages}
                 onClick={() => handlePageChange(currentPage + 1)}
               >
@@ -871,8 +974,52 @@ const ProductsPage = () => {
             </div>
           )}
         </section>
-
       </div>
+
+      {/* PRODUCT MODAL */}
+      {selectedProduct && (
+        <div className="product-modal-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="product-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={() => setSelectedProduct(null)}>×</button>
+
+            <div className="modal-body">
+              <div className="modal-image-section">
+                <div className="modal-image-placeholder">
+                  ●
+                </div>
+              </div>
+
+              <div className="modal-details-section">
+                <div className="modal-header">
+                  <span className="modal-category">
+                    {categories.find(c => c.id === selectedProduct.category)?.label}
+                  </span>
+                  <h2>{selectedProduct.title}</h2>
+                  <div className="product-sku">Product ID: {selectedProduct.sku}</div>
+                </div>
+
+                <p className="modal-description">{selectedProduct.description}</p>
+
+                <div className="modal-specs">
+                  {selectedProduct.specs.map((spec, index) => (
+                    <span key={index} className="modal-spec-tag">{spec}</span>
+                  ))}
+                </div>
+
+                <div className="modal-actions">
+                  <a
+                    href={`mailto:info@varunagro.com?subject=Quote for ${selectedProduct.title} (ID: ${selectedProduct.sku})`}
+                    className="get-quote-btn"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <ConditionalFooter />
     </>
   );

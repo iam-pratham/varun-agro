@@ -13,8 +13,6 @@ import Nav from "@/components/Nav/Nav";
 import ConditionalFooter from "@/components/ConditionalFooter/ConditionalFooter";
 import AnimatedButton from "@/components/AnimatedButton/AnimatedButton";
 import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
-import ClientReviews from "@/components/ClientReviews/ClientReviews";
-import CTAWindow from "@/components/CTAWindow/CTAWindow";
 import Copy from "@/components/Copy/Copy";
 import PartnersMarquee from "@/components/PartnersMarquee/PartnersMarquee";
 import ThreeDSection from "@/components/ThreeDSection/ThreeDSection";
@@ -22,14 +20,17 @@ import FounderSection from "@/components/FounderSection/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
 
 let isInitialLoad = true;
-gsap.registerPlugin(ScrollTrigger, CustomEase);
-CustomEase.create("hop", "0.9, 0, 0.1, 1");
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, CustomEase);
+  CustomEase.create("hop", "0.9, 0, 0.1, 1");
+}
 
 export default function Home() {
   const tagsRef = useRef(null);
   const missionRef = useRef(null);
   const headerRef = useRef(null);
   const [showPreloader, setShowPreloader] = useState(isInitialLoad);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [loaderAnimating, setLoaderAnimating] = useState(false);
   const lenis = useLenis();
 
@@ -51,7 +52,7 @@ export default function Home() {
 
   useGSAP(() => {
     if (!headerRef.current) return;
-    
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: headerRef.current,
@@ -70,7 +71,7 @@ export default function Home() {
     tl.to(
       ".commitment",
       {
-        color: "#998f82", 
+        color: "#998f82",
         fontStyle: "italic",
         duration: 1.5,
         ease: "power3.out",
@@ -89,7 +90,7 @@ export default function Home() {
 
     if (showPreloader) {
       setLoaderAnimating(true);
-      
+
       tl.to(
         ".word h1",
         {
@@ -201,6 +202,19 @@ export default function Home() {
       )}
       <Nav />
       <section className="hero">
+        <div className="hero-img">
+          <video
+            key={currentVideoIndex}
+            src={`/home/${currentVideoIndex + 1}.mp4`}
+            autoPlay
+            muted
+            playsInline
+            onEnded={() => {
+              setCurrentVideoIndex((prev) => (prev + 1) % 2);
+            }}
+          />
+          <div className="hero-video-overlay"></div>
+        </div>
         <div className="hero-gradient"></div>
         <div className="container">
           <div className="hero-content">
@@ -335,12 +349,6 @@ export default function Home() {
       <ThreeDSection />
       <FounderSection />
       <TestimonialsSection />
-      <CTAWindow
-        img="/home/Ultrarealistic_studio_product_2k_20260203114.jpeg"
-        header="Varun Agro"
-        callout="Excellence, Integrity, Commitment"
-        description="Delivering premium quality food products with a commitment to excellence and community growth."
-      />
       <ConditionalFooter />
     </>
   );

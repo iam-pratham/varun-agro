@@ -6,7 +6,9 @@ import { useGSAP } from "@gsap/react";
 import Copy from "../Copy/Copy";
 import "./PartnersMarquee.css";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const partners = [
   "coca-cola.svg",
@@ -34,8 +36,8 @@ const PartnersMarquee = () => {
     if (!track) return;
 
     // Total duration for one loop (adjust for speed)
-    const duration = 40; 
-    
+    const duration = 40;
+
     // Create the infinite loop tween
     const tl = gsap.to(track, {
       xPercent: -50, // Move 50% of the width (which corresponds to 2 sets of logos out of 4)
@@ -53,27 +55,27 @@ const PartnersMarquee = () => {
       onUpdate: (self) => {
         const velocity = Math.abs(self.getVelocity());
         const direction = self.direction; // 1 (down) or -1 (up)
-        
+
         if (direction === 0) return;
 
         // Base speed factor based on velocity
         // Maximum acceleration limited to prevent dizziness
-        const velocityFactor = Math.min(velocity / 200, 5); 
+        const velocityFactor = Math.min(velocity / 200, 5);
         const targetScale = direction * (1 + velocityFactor);
 
         gsap.to(tl, {
-            timeScale: targetScale,
-            duration: 0.2,
-            overwrite: true
+          timeScale: targetScale,
+          duration: 0.2,
+          overwrite: true
         });
 
         // Debounce returning to normal speed
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-            gsap.to(tl, {
-                timeScale: direction, // Return to base speed in the current direction
-                duration: 0.5
-            });
+          gsap.to(tl, {
+            timeScale: direction, // Return to base speed in the current direction
+            duration: 0.5
+          });
         }, 100);
       },
     });
@@ -84,7 +86,7 @@ const PartnersMarquee = () => {
     <div className="partners-marquee" ref={containerRef}>
       <div className="container partners-header">
         <Copy delay={0.1}>
-            <h1 className="lg">Our Partners</h1>
+          <h1 className="lg">Our Partners</h1>
         </Copy>
       </div>
       <div className="marquee-container">

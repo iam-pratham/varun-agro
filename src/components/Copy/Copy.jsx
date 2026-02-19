@@ -7,7 +7,9 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+}
 
 export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
   const containerRef = useRef(null);

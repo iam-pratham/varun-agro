@@ -1,5 +1,5 @@
 .testimonials-section {
-  padding: 0 0 8rem 0; /* Removed top padding to reduce gap */
+  padding: 0 0 3rem 0; /* Reduced bottom padding to decrease gap with footer */
   position: relative;
   overflow: hidden;
   background-color: var(--base-500);
