@@ -18,7 +18,7 @@ const featuredProjectsContent = [
     title: "IQF Fruits & Vegetables",
     description:
       "Individual Quick Freezing (IQF) technology ensures our peas, corn, and berries maintain their freshness, texture, and nutrients for global export.",
-    image: "/products/Frozen Sweet Corn.png",
+    image: "/products/Pineapple Dice.png",
   },
   {
     info: "Value-Added Food Solutions",
