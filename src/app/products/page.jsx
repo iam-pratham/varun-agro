@@ -29,7 +29,7 @@ const products = [
     title: "Tomato Crush Puree",
     description: "High-quality tomato crush puree made from fresh, sun-ripened tomatoes.",
     specs: ["Aseptic / Canned", "Natural Color", "Rich Flavor"],
-    image: "/products/tomato-crush-puree.jpg"
+    image: "/products/Tomato Crush puree.png"
   },
   {
     id: "tomato-crush-concentrate",
@@ -38,7 +38,7 @@ const products = [
     title: "Tomato Crush Concentrate",
     description: "Concentrated tomato crush for versatile culinary applications.",
     specs: ["Aseptic / Bulk", "High Brix", "Consistent Texture"],
-    image: "/products/tomato-crush-concentrate.jpg"
+    image: "/products/Tomato Crush Concentrate.png"
   },
   {
     id: "tomato-paste",
@@ -47,7 +47,7 @@ const products = [
     title: "Tomato Paste",
     description: "Thick, rich tomato paste perfect for sauces and bases.",
     specs: ["28-30% Brix", "Cold Break / Hot Break", "Aseptic"],
-    image: "/products/tomato-paste.jpg"
+    image: "/products/Tomato Paste.png"
   },
   {
     id: "pink-guava-puree",
@@ -56,7 +56,7 @@ const products = [
     title: "Pink Guava Puree",
     description: "Natural pink guava puree with authentic tropical flavor.",
     specs: ["9° Min Brix", "Aseptic", "Vitamin C Rich"],
-    image: "/products/pink-guava-puree.jpg"
+    image: "/products/Pink Guava Puree.png"
   },
   {
     id: "rajapuri-mango-puree",
@@ -65,7 +65,7 @@ const products = [
     title: "Rajapuri Mango Puree",
     description: "Distinctive Rajapuri mango puree known for its size and sweetness.",
     specs: ["Authentic Variety", "Aseptic", "Natural Sweetness"],
-    image: "/products/rajapuri-mango-puree.jpg"
+    image: "/products/Rajapuri Mango Puree.png"
   },
   {
     id: "kesar-mango-puree",
@@ -74,7 +74,7 @@ const products = [
     title: "Kesar Mango Puree",
     description: "Saffron-colored Kesar mango puree with intense aroma.",
     specs: ["16° Min Brix", "Aseptic / Canned", "Premium Quality"],
-    image: "/products/kesar-mango-puree.jpg"
+    image: "/products/Kesar Mango Puree.png"
   },
   {
     id: "banana-concentrate",
@@ -83,7 +83,7 @@ const products = [
     title: "Banana Concentrate",
     description: "Concentrated banana goodness for beverages and baking.",
     specs: ["High Viscosity", "Aseptic", "No Additives"],
-    image: "/products/banana-concentrate.jpg"
+    image: "/products/Banana Concentrate.png"
   },
   {
     id: "banana-puree",
@@ -92,7 +92,7 @@ const products = [
     title: "Banana Puree",
     description: "Smooth banana puree made from ripe Cavendish bananas.",
     specs: ["20-22° Brix", "Aseptic", "Creamy Texture"],
-    image: "/products/banana-puree.jpg"
+    image: "/products/Banana Puree.png"
   },
   {
     id: "red-papaya-concentrate",
@@ -101,7 +101,7 @@ const products = [
     title: "Red Papaya Concentrate",
     description: "Concentrated red papaya for intense flavor and color.",
     specs: ["Natural Red Color", "Aseptic", "High Nutrient"],
-    image: "/products/red-papaya-concentrate.jpg"
+    image: "/products/Red Papaya Concentrate.png"
   },
   {
     id: "red-papaya-puree",
@@ -110,7 +110,7 @@ const products = [
     title: "Red Papaya Puree",
     description: "Fresh red papaya puree suitable for juices and blends.",
     specs: ["14° Min Brix", "Aseptic", "Smooth"],
-    image: "/products/red-papaya-puree.jpg"
+    image: "/products/Red Papaya Puree.png"
   },
   {
     id: "white-guava-concentrate",
@@ -119,7 +119,7 @@ const products = [
     title: "White Guava Concentrate",
     description: "Concentrated white guava flavor for industrial use.",
     specs: ["High Acidity", "Aseptic", "Clear Color"],
-    image: "/products/white-guava-concentrate.jpg"
+    image: "/products/White Guava Concentrate.png"
   },
   {
     id: "white-guava-puree",
@@ -128,7 +128,7 @@ const products = [
     title: "White Guava Puree",
     description: "Classic white guava puree with a balanced sweet-tart profile.",
     specs: ["9° Min Brix", "Aseptic", "Versatile"],
-    image: "/products/white-guava-puree.jpg"
+    image: "/products/White Guava Puree.png"
   },
   {
     id: "totapuri-mango-puree",
@@ -137,7 +137,7 @@ const products = [
     title: "Totapuri Mango Puree",
     description: "Tangy and vibrant Totapuri mango puree.",
     specs: ["14° Min Brix", "Aseptic", "High Yield"],
-    image: "/products/totapuri-mango-puree.jpg"
+    image: "/products/Totapuri Mango Puree.png"
   },
   {
     id: "totapuri-mango-concentrate",
@@ -146,7 +146,7 @@ const products = [
     title: "Totapuri Mango Concentrate",
     description: "Concentrated form of Totapuri mango for beverage manufacturing.",
     specs: ["28° Min Brix", "Aseptic", "Consistent"],
-    image: "/products/totapuri-mango-concentrate.jpg"
+    image: "/products/Totapuri Mango Concentrate.png"
   },
   {
     id: "alphonso-mango-puree",
@@ -155,7 +155,7 @@ const products = [
     title: "Alphonso Mango Puree",
     description: "The King of Mangoes in a smooth, aromatic puree.",
     specs: ["16° Min Brix", "Aseptic / Canned", "GI Tagged Origin"],
-    image: "/products/alphonso-mango-puree.jpg"
+    image: "/products/Alphonso mango Puree (Premium Ratnagiri).png"
   },
   {
     id: "jamun-pulp",
@@ -164,7 +164,7 @@ const products = [
     title: "Jamun Pulp",
     description: "Rich, purple Jamun (Black Plum) pulp with unique astringency.",
     specs: ["Natural Color", "Aseptic", "Health Benefits"],
-    image: "/products/jamun-pulp.jpg"
+    image: "/products/Jamun Pulp.png"
   },
   {
     id: "strawberry-pulp",
@@ -173,7 +173,7 @@ const products = [
     title: "Strawberry Pulp",
     description: "Vibrant red strawberry pulp for ice creams and toppings.",
     specs: ["Seedless Options", "Frozen / Aseptic", "Sweet & Tart"],
-    image: "/products/strawberry-pulp.jpg"
+    image: "/products/Strawberry Pulp.png"
   },
   {
     id: "red-chilli-paste",
@@ -182,7 +182,7 @@ const products = [
     title: "Red Chilli Paste",
     description: "Spicy red chilli paste for adding heat and color.",
     specs: ["Hot", "Consistent Texture", "Vibrant Red"],
-    image: "/products/red-chilli-paste.jpg"
+    image: "/products/Red Chilli paste.png"
   },
   {
     id: "lime-pulp",
@@ -191,7 +191,7 @@ const products = [
     title: "Lime Pulp",
     description: "Zesty lime pulp for beverages and culinary use.",
     specs: ["High Acidity", "Frozen", "Fresh Aroma"],
-    image: "/products/lime-pulp.jpg"
+    image: "/products/Lime Pulp.png"
   },
 
   // FREEZE DRIED
@@ -202,7 +202,7 @@ const products = [
     title: "Strawberry (Whole)",
     description: "Whole freeze-dried strawberries retaining shape and flavor.",
     specs: ["Whole Fruit", "Crunchy", "100% Natural"],
-    image: "/products/fd-strawberry-whole.jpg"
+    image: "/products/Strawberry (Whole).png"
   },
   {
     id: "fd-alphonso-mango",
@@ -211,7 +211,7 @@ const products = [
     title: "Alphonso Mango (Slice & Powder)",
     description: "Premium Alphonso mango available in slices or powder.",
     specs: ["Slice / Powder", "Intense Aroma", "No Sugar Added"],
-    image: "/products/fd-alphonso-mango.jpg"
+    image: "/products/Alphonso Mango(Slice & Powder).png"
   },
   {
     id: "fd-banana-slice",
@@ -220,7 +220,7 @@ const products = [
     title: "Banana (Slice)",
     description: "Crunchy freeze-dried banana slices.",
     specs: ["Sliced", "Sweet", "Snack Ready"],
-    image: "/products/fd-banana-slice.jpg"
+    image: "/products/Banana Slice.png"
   },
   {
     id: "fd-pineapple-dice",
@@ -229,7 +229,7 @@ const products = [
     title: "Pineapple (Dice)",
     description: "Tangy pineapple dices, freeze-dried to perfection.",
     specs: ["Diced", "Tropical", "Rehydratable"],
-    image: "/products/fd-pineapple-dice.jpg"
+    image: "/products/Pineapple Dice.png"
   },
   {
     id: "fd-pumpkin-dice",
@@ -238,7 +238,7 @@ const products = [
     title: "Pumpkin (Dice)",
     description: "Versatile pumpkin dices for soups and baking.",
     specs: ["Diced", "Nutritious", "Long Shelf Life"],
-    image: "/products/fd-pumpkin-dice.jpg"
+    image: "/products/Pumpkin Dice.png"
   },
   {
     id: "fd-yam-dice",
@@ -247,7 +247,7 @@ const products = [
     title: "Yam (Dice)",
     description: "Freeze-dried yam dices for convenient cooking.",
     specs: ["Diced", "Starchy", "Quick Cook"],
-    image: "/products/fd-yam-dice.jpg"
+    image: "/products/YAM DICE.png"
   },
   {
     id: "fd-okra-ring",
@@ -256,7 +256,7 @@ const products = [
     title: "Okra Ring",
     description: "Crispy okra rings, perfect for snacking or curries.",
     specs: ["Ring Cut", "Crispy", "Green"],
-    image: "/products/fd-okra-ring.jpg"
+    image: "/products/Okra Ring.png"
   },
   {
     id: "fd-sweetcorn-kernel",
@@ -265,7 +265,7 @@ const products = [
     title: "Sweet Corn Kernel",
     description: "Sweet corn kernels that rehydrate instantly.",
     specs: ["Whole Kernel", "Sweet", "Yellow"],
-    image: "/products/fd-sweetcorn-kernel.jpg"
+    image: "/products/Sweetcorn Kernel.png"
   },
   {
     id: "fd-mushroom",
@@ -274,7 +274,7 @@ const products = [
     title: "Mushroom",
     description: "Earthy mushrooms preserved via freeze-drying.",
     specs: ["Sliced / Whole", "Umami", "Versatile"],
-    image: "/products/fd-mushroom.jpg"
+    image: "/products/Mushroom.png"
   },
   {
     id: "fd-sweet-potato",
@@ -283,7 +283,7 @@ const products = [
     title: "Sweet Potato",
     description: "Sweet potato pieces for various applications.",
     specs: ["Diced / Sliced", "Sweet", "Nutritious"],
-    image: "/products/fd-sweet-potato.jpg"
+    image: "/products/Sweet Potato.png"
   },
   {
     id: "fd-tomato-dice",
@@ -292,7 +292,7 @@ const products = [
     title: "Tomato (Dice)",
     description: "Diced tomatoes perfect for instant mixes.",
     specs: ["Diced", "Tangy", "Red"],
-    image: "/products/fd-tomato-dice.jpg"
+    image: "/products/Tomato Dice.png"
   },
   {
     id: "fd-basil",
@@ -301,7 +301,7 @@ const products = [
     title: "Basil",
     description: "Aromatic basil leaves freeze-dried to keep fresh flavor.",
     specs: ["Leaves", "Aromatic", "Herb"],
-    image: "/products/fd-basil.jpg"
+    image: "/products/Basil.png"
   },
   {
     id: "fd-ginger",
@@ -310,7 +310,7 @@ const products = [
     title: "Ginger",
     description: "Pungent ginger pieces or powder.",
     specs: ["Pieces / Powder", "Spicy", "Medicinal"],
-    image: "/products/fd-ginger.jpg"
+    image: "/products/Ginger.png"
   },
   {
     id: "fd-broccoli",
@@ -319,7 +319,7 @@ const products = [
     title: "Broccoli",
     description: "Nutrient-rich broccoli florets.",
     specs: ["Florets", "Green", "Healthy"],
-    image: "/products/fd-broccoli.jpg"
+    image: "/products/Broccoli.png"
   },
   {
     id: "fd-carrot",
@@ -328,7 +328,7 @@ const products = [
     title: "Carrot",
     description: "Sweet carrot pieces for instant foods.",
     specs: ["Diced", "Orange", "Sweet"],
-    image: "/products/fd-carrot.jpg"
+    image: "/products/carrot.png"
   },
   {
     id: "fd-beetroot",
@@ -337,7 +337,7 @@ const products = [
     title: "Beetroot",
     description: "Earthy beetroot pieces with deep color.",
     specs: ["Diced", "Deep Red", "Natural Colorant"],
-    image: "/products/fd-beetroot.jpg"
+    image: "/products/Beetroot.png"
   },
   {
     id: "fd-lemon-grass",
@@ -346,7 +346,7 @@ const products = [
     title: "Lemon Grass",
     description: "Citrusy lemon grass for teas and asian cuisine.",
     specs: ["Cut", "Citrus Aroma", "Herbal"],
-    image: "/products/fd-lemon-grass.jpg"
+    image: "/products/Lemon Grass.png"
   },
   {
     id: "fd-asparagus",
@@ -355,7 +355,7 @@ const products = [
     title: "Asparagus",
     description: "Premium asparagus spears.",
     specs: ["Cut / Whole", "Gourmet", "Green"],
-    image: "/products/fd-asparagus.jpg"
+    image: "/products/Asparagus.png"
   },
   {
     id: "fd-leek-spring-onion",
@@ -364,7 +364,7 @@ const products = [
     title: "Leek Spring Onion",
     description: "A blend or choice of leeks and spring onions.",
     specs: ["Chopped", "Onion Flavor", "Garnish"],
-    image: "/products/fd-leek-spring-onion.jpg"
+    image: "/products/Leek Spring Onion.png"
   },
   {
     id: "fd-coriander",
@@ -373,7 +373,7 @@ const products = [
     title: "Coriander",
     description: "Fresh coriander leaves preserved perfectly.",
     specs: ["Leaves", "Aromatic", "Garnish"],
-    image: "/products/fd-coriander.jpg"
+    image: "/products/coriander'.png"
   },
   {
     id: "fd-mint",
@@ -382,7 +382,7 @@ const products = [
     title: "Mint",
     description: "Refreshing mint leaves.",
     specs: ["Leaves", "Cooling", "Aromatic"],
-    image: "/products/fd-mint.jpg"
+    image: "/products/MINT.png"
   },
 
   // FROZEN FRUITS & VEGETABLES
@@ -393,7 +393,7 @@ const products = [
     title: "Mango (Dice)",
     description: "IQF mango dices, ready to use.",
     specs: ["IQF", "Diced", "Sweet"],
-    image: "/products/frozen-mango-dice.jpg"
+    image: "/products/Mango Dice.jpg"
   },
   {
     id: "frozen-strawberry",
@@ -402,7 +402,7 @@ const products = [
     title: "Strawberry",
     description: "Whole or sliced IQF strawberries.",
     specs: ["IQF", "Red", "Sweet"],
-    image: "/products/frozen-strawberry.jpg"
+    image: "/products/Strawberry.png"
   },
   {
     id: "frozen-pomegranate-arils",
@@ -411,7 +411,7 @@ const products = [
     title: "Pomegranate Arils",
     description: "Fresh frozen pomegranate arils.",
     specs: ["IQF", "Ruby Red", "Juicy"],
-    image: "/products/frozen-pomegranate-arils.jpg"
+    image: "/products/Pomegranate Arils.png"
   },
   {
     id: "frozen-papaya-dice",
@@ -420,7 +420,7 @@ const products = [
     title: "Papaya (Dice)",
     description: "IQF papaya dices.",
     specs: ["IQF", "Orange", "Sweet"],
-    image: "/products/frozen-papaya-dice.jpg"
+    image: "/products/Papaya Dice.png"
   },
   {
     id: "frozen-muskmelon-dice-balls",
@@ -429,7 +429,7 @@ const products = [
     title: "Muskmelon (Dice/Balls)",
     description: "Sweet muskmelon available in dices or balls.",
     specs: ["IQF", "Dice / Ball", "Aromatic"],
-    image: "/products/frozen-muskmelon.jpg"
+    image: "/products/Muskmelon Dice Balls.png"
   },
   {
     id: "frozen-pineapple-dice",
@@ -438,7 +438,7 @@ const products = [
     title: "Pineapple (Dice)",
     description: "IQF pineapple dices.",
     specs: ["IQF", "Yellow", "Tangy"],
-    image: "/products/frozen-pineapple-dice.jpg"
+    image: "/products/Pineapple Dice.png"
   },
   {
     id: "frozen-sweet-corn-kernels",
@@ -447,7 +447,7 @@ const products = [
     title: "Sweet Corn Kernels",
     description: "IQF sweet corn kernels.",
     specs: ["IQF", "Sweet", "Yellow"],
-    image: "/products/frozen-sweet-corn-kernels.jpg"
+    image: "/products/Sweet Corn Kernels.png"
   },
   {
     id: "frozen-tomato-dice",
@@ -456,7 +456,7 @@ const products = [
     title: "Tomato (Dice)",
     description: "IQF tomato dices.",
     specs: ["IQF", "Red", "Convenient"],
-    image: "/products/frozen-tomato-dice.jpg"
+    image: "/products/Tomato Dice.png"
   },
   {
     id: "frozen-sweet-potato",
@@ -465,7 +465,7 @@ const products = [
     title: "Sweet Potato",
     description: "IQF sweet potato.",
     specs: ["IQF", "Nutritious", "Versatile"],
-    image: "/products/frozen-sweet-potato.jpg"
+    image: "/products/Sweet Potato.png"
   },
   {
     id: "frozen-radish",
@@ -474,7 +474,7 @@ const products = [
     title: "Radish",
     description: "IQF radish pieces.",
     specs: ["IQF", "White", "Crisp"],
-    image: "/products/frozen-radish.jpg"
+    image: "/products/radish.png"
   },
   {
     id: "frozen-pumpkin",
@@ -483,7 +483,7 @@ const products = [
     title: "Pumpkin",
     description: "IQF pumpkin pieces.",
     specs: ["IQF", "Orange", "Cooking Ready"],
-    image: "/products/frozen-pumpkin.jpg"
+    image: "/products/pumpkin.png"
   },
   {
     id: "frozen-green-pepper",
@@ -492,7 +492,7 @@ const products = [
     title: "Green Pepper",
     description: "IQF green pepper (capsicum).",
     specs: ["IQF", "Diced / Strip", "Green"],
-    image: "/products/frozen-green-pepper.jpg"
+    image: "/products/Green Pepper(Capsicum).png"
   },
   {
     id: "frozen-baby-corn",
@@ -501,7 +501,7 @@ const products = [
     title: "Baby Corn",
     description: "IQF baby corn.",
     specs: ["IQF", "Whole / Cut", "Crunchy"],
-    image: "/products/frozen-baby-corn.jpg"
+    image: "/products/babycorn.png"
   },
   {
     id: "frozen-edamame",
@@ -510,7 +510,7 @@ const products = [
     title: "Edamame",
     description: "IQF edamame beans.",
     specs: ["IQF", "Green", "Protein Rich"],
-    image: "/products/frozen-edamame.jpg"
+    image: "/products/Edamame.png"
   },
   {
     id: "frozen-cabbage",
@@ -519,7 +519,7 @@ const products = [
     title: "Cabbage",
     description: "IQF cabbage shreds.",
     specs: ["IQF", "Shredded", "Fresh"],
-    image: "/products/frozen-cabbage.jpg"
+    image: "/products/Cabbage.png"
   },
   {
     id: "frozen-ginger",
@@ -528,7 +528,7 @@ const products = [
     title: "Ginger",
     description: "IQF ginger pieces.",
     specs: ["IQF", "Pungent", "Root"],
-    image: "/products/frozen-ginger.jpg"
+    image: "/products/Ginger.png"
   },
   {
     id: "frozen-green-chilli",
@@ -537,7 +537,7 @@ const products = [
     title: "Green Chilli",
     description: "IQF green chillies.",
     specs: ["IQF", "Spicy", "Whole / Cut"],
-    image: "/products/frozen-green-chilli.jpg"
+    image: "/products/Green Chilly.png"
   },
   {
     id: "frozen-asparagus",
@@ -546,7 +546,7 @@ const products = [
     title: "Asparagus",
     description: "IQF asparagus.",
     specs: ["IQF", "Premium", "Green"],
-    image: "/products/frozen-asparagus.jpg"
+    image: "/products/Asparagus.png"
   },
   {
     id: "frozen-sweet-corn-cob",
@@ -555,7 +555,7 @@ const products = [
     title: "Sweet Corn & Cob",
     description: "IQF sweet corn on the cob or kernels.",
     specs: ["IQF", "Cob / Kernel", "Sweet"],
-    image: "/products/frozen-sweet-corn-cob.jpg"
+    image: "/products/Sweet Corn & Cob.png"
   },
   {
     id: "frozen-onion-dice",
@@ -564,7 +564,7 @@ const products = [
     title: "Onion (Dice)",
     description: "IQF onion dices.",
     specs: ["IQF", "Diced", "Pungent"],
-    image: "/products/frozen-onion-dice.jpg"
+    image: "/products/Onion Dice.png"
   },
   {
     id: "frozen-green-peas",
@@ -573,7 +573,7 @@ const products = [
     title: "Green Peas",
     description: "IQF green peas.",
     specs: ["IQF", "Sweet", "Green"],
-    image: "/products/frozen-green-peas.jpg"
+    image: "/products/Green Peas.png"
   },
   {
     id: "frozen-scotch-bonnet",
@@ -582,7 +582,7 @@ const products = [
     title: "Scotch Bonnet Pepper",
     description: "IQF Scotch Bonnet peppers.",
     specs: ["IQF", "Very Hot", "Distinctive Flavor"],
-    image: "/products/frozen-scotch-bonnet.jpg"
+    image: "/products/Scotch Bonnet Pepper.png"
   },
   {
     id: "frozen-cauliflower",
@@ -591,7 +591,7 @@ const products = [
     title: "Cauliflower",
     description: "IQF cauliflower florets.",
     specs: ["IQF", "Florets", "White"],
-    image: "/products/frozen-cauliflower.jpg"
+    image: "/products/Cauliflower.png"
   },
   {
     id: "frozen-carrot",
@@ -600,7 +600,7 @@ const products = [
     title: "Carrot",
     description: "IQF carrot pieces.",
     specs: ["IQF", "Diced / Sliced", "Orange"],
-    image: "/products/frozen-carrot.jpg"
+    image: "/products/carrot.png"
   },
   {
     id: "frozen-beetroot",
@@ -609,7 +609,7 @@ const products = [
     title: "Beetroot",
     description: "IQF beetroot pieces.",
     specs: ["IQF", "Diced", "Red"],
-    image: "/products/frozen-beetroot.jpg"
+    image: "/products/Beetroot.png"
   },
   {
     id: "frozen-bitter-gourd",
@@ -618,7 +618,7 @@ const products = [
     title: "Bitter Gourd",
     description: "IQF bitter gourd slices.",
     specs: ["IQF", "Sliced", "Bitter"],
-    image: "/products/frozen-bitter-gourd.jpg"
+    image: "/products/bitter gourd.png"
   },
   {
     id: "frozen-broccoli",
@@ -627,7 +627,7 @@ const products = [
     title: "Broccoli",
     description: "IQF broccoli florets.",
     specs: ["IQF", "Florets", "Green"],
-    image: "/products/frozen-broccoli.jpg"
+    image: "/products/Broccoli.png"
   },
 
   // CHOW
@@ -638,7 +638,7 @@ const products = [
     title: "Green Peas Chow",
     description: "Savory chow made from fresh green peas.",
     specs: ["Ready to Eat", "Savory", "Unique Blend"],
-    image: "/products/green-peas-chow.jpg"
+    image: "/products/Green Peas.png"
   },
   {
     id: "mango-chow",
@@ -647,7 +647,7 @@ const products = [
     title: "Mango Chow",
     description: "Tangy and spicy mango chow.",
     specs: ["Traditional Recipe", "Tangy", "Spicy"],
-    image: "/products/mango-chow.jpg"
+    image: "/products/mango.png"
   },
   {
     id: "strawberry-banana-chow",
@@ -656,7 +656,7 @@ const products = [
     title: "Strawberry & Banana Chow",
     description: "A delightful mix of strawberry and banana flavors.",
     specs: ["Sweet", "Fruity", "Dessert Topping"],
-    image: "/products/strawberry-banana-chow.jpg"
+    image: "/products/strawberry & banana.png"
   },
   {
     id: "strawberry-chow",
@@ -665,7 +665,7 @@ const products = [
     title: "Strawberry Chow",
     description: "Pure strawberry goodness in a chow format.",
     specs: ["Sweet", "Red", "Berry Flavor"],
-    image: "/products/strawberry-chow.jpg"
+    image: "/products/Strawberry.png"
   },
   {
     id: "sweet-corn-chow",
@@ -674,7 +674,7 @@ const products = [
     title: "Sweet Corn Chow",
     description: "Creamy and sweet corn chow.",
     specs: ["Sweet", "Creamy", "Corn Base"],
-    image: "/products/sweet-corn-chow.jpg"
+    image: "/products/sweet corn.png"
   },
   {
     id: "pineapple-papaya-chow",
@@ -683,7 +683,7 @@ const products = [
     title: "Pineapple & Papaya Chow",
     description: "Tropical blend of pineapple and papaya.",
     specs: ["Tropical", "Sweet & Tangy", "Refreshing"],
-    image: "/products/pineapple-papaya-chow.jpg"
+    image: "/products/pineapple & papaya.png"
   },
 
   // GRO
@@ -694,7 +694,7 @@ const products = [
     title: "Gro Tomato Ketchup (1KG)",
     description: "Large family pack of Gro Tomato Ketchup.",
     specs: ["1KG", "Pouch", "Rich Tomato"],
-    image: "/products/gro-ketchup-1kg.jpg"
+    image: "/products/GRO Tomato Ketchup(1 kg).png"
   },
   {
     id: "gro-ketchup-200g",
@@ -703,7 +703,7 @@ const products = [
     title: "Gro Tomato Ketchup (200g)",
     description: "Convenient 200g pack of Gro Tomato Ketchup.",
     specs: ["200g", "Pouch", "Rich Tomato"],
-    image: "/products/gro-ketchup-200g.jpg"
+    image: "/products/GRO Tomato Ketchup (200g).png"
   },
   {
     id: "gro-ketchup-950g",
@@ -712,7 +712,7 @@ const products = [
     title: "Gro Tomato Ketchup (950g)",
     description: "Value pack of Gro Tomato Ketchup.",
     specs: ["950g", "Bottle / Pouch", "Rich Tomato"],
-    image: "/products/gro-ketchup-950g.jpg"
+    image: "/products/GRO Tomato Ketchup (950g).png"
   },
   {
     id: "gro-ketchup-8g",
@@ -721,7 +721,7 @@ const products = [
     title: "Gro Tomato Ketchup (8g)",
     description: "Single serve sachet of Gro Tomato Ketchup.",
     specs: ["8g", "Sachet", "Travel Friendly"],
-    image: "/products/gro-ketchup-8g.jpg"
+    image: "/products/Tomato Ketchup (8g).png"
   },
 
   // ZINGAT
@@ -732,7 +732,7 @@ const products = [
     title: "Tomato Ketchup (950g)",
     description: "Zingat brand tomato ketchup, tangy and sweet.",
     specs: ["950g", "Bottle", "Zingat Brand"],
-    image: "/products/zingat-ketchup-950g.jpg"
+    image: "/products/Tomato Ketchup (950g).png"
   },
   {
     id: "zingat-vinegar",
@@ -741,7 +741,7 @@ const products = [
     title: "Zingat Vinegar",
     description: "High quality vinegar for cooking and preservation.",
     specs: ["Synthetic / Natural", "Acidic", "Clear"],
-    image: "/products/zingat-vinegar.jpg"
+    image: "/products/Zingat Vinegar.png"
   },
   {
     id: "zingat-gg-paste-450g",
@@ -750,7 +750,7 @@ const products = [
     title: "Ginger Garlic Paste (450g)",
     description: "Aromatic ginger garlic paste in a medium pack.",
     specs: ["450g", "Paste", "Convenient"],
-    image: "/products/zingat-gg-paste-450g.jpg"
+    image: "/products/Ginger Garlic Paste (450g).png"
   },
   {
     id: "zingat-ketchup-130g",
@@ -759,7 +759,7 @@ const products = [
     title: "Tomato Ketchup (130g)",
     description: "Small pack of Zingat tomato ketchup.",
     specs: ["130g", "Pouch", "Tangy"],
-    image: "/products/zingat-ketchup-130g.jpg"
+    image: "/products/Tomato Ketchup (130g).png"
   },
   {
     id: "zingat-ketchup-misc",
@@ -768,7 +768,7 @@ const products = [
     title: "Tomato Ketchup",
     description: "Zingat quality tomato ketchup.",
     specs: ["Condiment", "Rich Taste", "Zingat Brand"],
-    image: "/products/zingat-ketchup-950g.jpg"
+    image: "/products/Tomato Ketchup.png"
   },
   {
     id: "zingat-gg-paste-200g",
@@ -777,7 +777,7 @@ const products = [
     title: "Ginger Garlic Paste (200g)",
     description: "Small pack of aromatic ginger garlic paste.",
     specs: ["200g", "Paste", "Convenient"],
-    image: "/products/zingat-gg-paste-200g.jpg"
+    image: "/products/Ginger Garlic Paste (200g).png"
   },
 
   // ICE FARM
@@ -788,7 +788,7 @@ const products = [
     title: "Frozen Green Peas",
     description: "Ice Farm brand frozen green peas.",
     specs: ["Frozen", "Sweet", "Ice Farm Brand"],
-    image: "/products/ice-farm-peas.jpg"
+    image: "/products/Frozen Green Peas.png"
   },
   {
     id: "ice-farm-corn",
@@ -797,7 +797,7 @@ const products = [
     title: "Frozen Sweet Corn",
     description: "Ice Farm brand frozen sweet corn.",
     specs: ["Frozen", "Sweet", "Ice Farm Brand"],
-    image: "/products/ice-farm-corn.jpg"
+    image: "/products/Frozen Sweet Corn.png"
   },
   {
     id: "ice-farm-mixed-veg",
@@ -806,7 +806,7 @@ const products = [
     title: "Frozen Mixed Vegetables",
     description: "Ice Farm brand frozen mixed vegetables.",
     specs: ["Frozen", "Mixed", "Ice Farm Brand"],
-    image: "/products/ice-farm-mixed-veg.jpg"
+    image: "/products/Frozen Mixed Vegetables.png"
   },
 ];
 
@@ -911,18 +911,17 @@ const ProductsPage = () => {
                   style={{ cursor: 'pointer' }}
                 >
                   <div className="product-image">
-                    {/* Placeholder for now - eventually use Next/Image with actual assets */}
-                    <div style={{
+                    <img src={product.image} alt={product.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                    <div className="fallback-placeholder" style={{
+                      display: 'none',
                       width: '100%',
                       height: '100%',
                       background: 'linear-gradient(45deg, var(--base-450), var(--base-500))',
-                      display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       color: 'var(--base-300)',
                       fontSize: '3rem'
                     }}>
-                      {/* Simple visual placeholder if image fails or is missing */}
                       ●
                     </div>
                   </div>
@@ -984,7 +983,17 @@ const ProductsPage = () => {
 
             <div className="modal-body">
               <div className="modal-image-section">
-                <div className="modal-image-placeholder">
+                <img src={selectedProduct?.image} alt={selectedProduct?.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                <div className="fallback-placeholder" style={{
+                  display: 'none',
+                  width: '100%',
+                  height: '100%',
+                  background: 'linear-gradient(45deg, var(--base-450), var(--base-500))',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--base-300)',
+                  fontSize: '3rem'
+                }}>
                   ●
                 </div>
               </div>

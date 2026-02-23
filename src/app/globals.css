@@ -168,3 +168,12 @@ body.menu-open .menu *,
 body.menu-open .menu-toggle {
   pointer-events: auto;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
